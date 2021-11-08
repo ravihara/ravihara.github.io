@@ -4,7 +4,7 @@ description: Eureka is a elegant and powerful theme for Hugo.
 
 repoEditURL:
 
-dateFormat: YYYY-MM-DD HH:MM:SS +/-TTTT
+dateFormat:
 
 titleSeparator:
 
@@ -25,6 +25,13 @@ highlight:
     # See https://github.com/highlightjs/cdn-release/tree/master/build/languages for available languages.
     languages:
       - dart
+      - bash
+      - go
+      - java
+      - javascript
+      - json
+      - yaml
+      - typescript
     # See https://github.com/highlightjs/cdn-release/tree/master/build/styles for available styles.
     style: solarized-light
 

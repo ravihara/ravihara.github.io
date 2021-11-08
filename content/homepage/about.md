@@ -46,7 +46,7 @@ widget:
 ## Self Introduction
 
 Software architect and programmer by profession. Focused mainly on free and open source software (FOSS) promotion and
-adoption in businesses. Deeper interest in Samskrutham (Sanskrit) as the language, world culture, traditions and travel.
-Hoping that my writing talk more about me than myself. Please do check the posts and provide your comments.
+adoption in businesses. Interested in world culture, literature, traveling and technologies. Please do check the posts
+and provide your valuable comments.
 
-*Thanks for visiting*.
+*Thanks for your time*.

@@ -3,6 +3,6 @@
     "line_length": 120
   },
   "MD033": {
-    "allowed_elements": ["div", "span", "code", "p", "style"]
+    "allowed_elements": ["div", "span", "code", "p", "style", "br"]
   }
 }

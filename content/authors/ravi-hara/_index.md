@@ -2,7 +2,7 @@
 # Name
 title: Ravi Hara
 role: Site Admin
-bio: Website administrator
+bio: Administrator
 avatar: images/icon.jpg
 
 organization:
