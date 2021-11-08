@@ -1,7 +1,7 @@
 ---
 title: "Home WiFi using CDMA modem"
 date: 2021-11-08T20:51:10+05:30
-draft: true
+draft: false
 categories:
   - linux
   - networking
