@@ -27,7 +27,7 @@
 <meta name=description content="In case CDMA technology is still offered in your area, this post might be useful to you in setting up a simple Home WiFi using a CDMA modem, WiFi router and a Linux machine. This could be a good excercise to revive your old Linux box and that old WiFi router which had been laying useless :-).
 What you need  Linux machine - An old Debian / Ubuntu Linux pc will do too. WiFi router - An old 2.">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"Home WiFi using CDMA modem","item":"/posts/usb-cdma-wifi/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/usb-cdma-wifi/"},"headline":"Home WiFi using CDMA modem | Ravi Hara","datePublished":"2021-11-08T20:51:10+05:30","dateModified":"2021-11-08T20:51:10+05:30","wordCount":448,"author":{"@type":"Person","name":["Ravi Hara"]},"publisher":{"@type":"Person","name":"Ravi Hara","logo":{"@type":"ImageObject","url":"/images/icon.jpg"}},"description":"In case CDMA technology is still offered in your area, this post might be useful to you in setting up a simple Home WiFi using a CDMA modem, WiFi router and a Linux machine. This could be a good excercise to revive your old Linux box and that old WiFi router which had been laying useless :-).\nWhat you need  Linux machine - An old Debian \/ Ubuntu Linux pc will do too. WiFi router - An old 2."}</script><meta property="og:title" content="Home WiFi using CDMA modem | Ravi Hara">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/usb-cdma-wifi/"},"headline":"Home WiFi using CDMA modem | Ravi Hara","datePublished":"2021-11-08T20:51:10+05:30","dateModified":"2021-11-08T20:51:10+05:30","wordCount":816,"author":{"@type":"Person","name":["Ravi Hara"]},"publisher":{"@type":"Person","name":"Ravi Hara","logo":{"@type":"ImageObject","url":"/images/icon.jpg"}},"description":"In case CDMA technology is still offered in your area, this post might be useful to you in setting up a simple Home WiFi using a CDMA modem, WiFi router and a Linux machine. This could be a good excercise to revive your old Linux box and that old WiFi router which had been laying useless :-).\nWhat you need  Linux machine - An old Debian \/ Ubuntu Linux pc will do too. WiFi router - An old 2."}</script><meta property="og:title" content="Home WiFi using CDMA modem | Ravi Hara">
 <meta property="og:type" content="article">
 <meta property="og:image" content="/images/icon.jpg">
 <meta property="og:url" content="/posts/usb-cdma-wifi/">
@@ -86,7 +86,7 @@ What you need  Linux machine - An old Debian / Ubuntu Linux pc will do too. WiFi
 </div>
 <div class="mr-6 my-2">
 <i class="fas fa-clock mr-1"></i>
-<span>3 min read</span>
+<span>4 min read</span>
 </div>
 <div class="mr-6 my-2">
 <i class="fas fa-folder mr-1"></i>
@@ -139,7 +139,7 @@ in case they are not already loaded.</p>
 </li>
 <li>
 <p>Edit the file <code>/etc/modules</code> and append the following lines if they do not already exist.
-Check and use the appropriate values for <code>vendor</code> and <code>product</code> for the USB modem, by
+Check and use the appropriate values for <code>vendor</code> and <code>product</code> ids for the USB modem, by
 referring to the file <code>/proc/bus/usb/devices</code>.<br><br></p>
 <pre><code class=language-bash>usbserial vendor=0x19d2 product=0xfffd
 cdc_acm
@@ -187,6 +187,72 @@ dial-number will be #777 and, dial-password and dial-username will be the phone 
 <p>Run <code>wvdial</code> to initiate the PPP connection.</p>
 </li>
 </ol>
+<h3 id=nat-forwarding-with-iptables>NAT forwarding with iptables</h3>
+<p>In this step, we will be configuring the NAT table to masquerade ppp0 network interface
+and configure forwarding rule for the ethernet interface.</p>
+<ol>
+<li>
+<p>Open a terminal and the command <code>sudo bash</code> in order to enter BASH as super-user.</p>
+</li>
+<li>
+<p>Create or open the file <code>/usr/local/sbin/ppp_eth_route</code> and enter the following content.
+If the file altready exists, first take a backup and then replace its content with the following.</p>
+<pre><code class=language-bash>#!/bin/bash
+
+
+iptables —table nat —flush
+
+
+iptables —table nat —delete-chain
+
+
+iptables —table nat —append POSTROUTING —out-interface ppp0 -j MASQUERADE
+iptables —append FORWARD —in-interface eth0 -j ACCEPT
+
+
+</code></pre>
+</li>
+<li>
+<p>Save the file and change its permission to 0755 using the command;</p>
+<pre><code class=language-bash>chown 755 /usr/local/sbin/ppp_eth_route
+</code></pre>
+</li>
+<li>
+<p>Run the <code>ppp_eth_route</code> script created above.</p>
+</li>
+</ol>
+<h3 id=setting-up-local-dns-and-dhcp-server>Setting up local DNS and DHCP server</h3>
+<p>We will be using the <code>dnsmasq</code> tool to setup a DHCP server and configure the DNS host resolution.</p>
+<ol>
+<li>Open a terminal and the command <code>sudo bash</code> in order to enter BASH as super-user.</li>
+<li>Edit the file <code>/etc/network/interfaces</code> and replace it&rsquo;s content with the following.
+It is recommended to take a backup of the file before changing it&rsquo;s content.</li>
+</ol>
+<pre><code class=language-bash>auth eth0
+iface eth0 inet static
+address 10.10.1.1
+netmask 255.255.255.0
+</code></pre>
+<p>Save and close the file.
+3. Edit the file <code>/etc/dnsmasq.conf</code> as follows. Then, save and close the file.</p>
+<ol>
+<li>Uncomment the line containing <code>interface=eth0</code></li>
+<li>Uncomment the line that starts with <code>dhcp-range</code> to enable integrated DHCP server. The line
+must be edited as <code>dhcp-range=10.10.1.10,10.10.1.200,12h</code></li>
+</ol>
+<p>Here, the <code>dnsmasq</code> tool is allowed to provide IPs in the range 10.10.1.10 to 10.10.1.200 with a lease time of 12 hours.
+4. Restart the system services - <code>network-manager</code> and <code>dnsmasq</code>.</p>
+<p>NOTE: The above steps are one time activity. For subsequent use, you need to run the following steps
+as superuser (i.e., sudo). You need to ensure the USB modem and the WiFi router are properly connected to
+the Linux machine before proceeding.</p>
+<ol>
+<li>Restart the system <code>networking / network-manager</code> service.</li>
+<li>Run <code>wvdial &</code>. Wait till it fetches IP address and DNS entries. Otherwise, there is no use
+in proceeding further since, there is likely a PPP connection issue.</li>
+<li>Run <code>/usr/local/sbin/ppp_eth_route</code>.</li>
+<li>Restart the system <code>dnsmasq</code> service.</li>
+</ol>
+<p>Of course, you can put the above commands in a shell script and run them as super-user. That&rsquo;s it!</p>
 </div>
 <div class=py-2>
 <div class="flex flex-col md:flex-row items-center my-8">
