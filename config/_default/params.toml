@@ -2,17 +2,17 @@
 
 # titleSeparator = "|" # Title separator. Default to "-".
 
-description = "An extreme fast, responsive and feature-rich blog theme for Hugo"
+description = "Personal website of Ravishankar Haranath, created using Hugo"
 keywords = "Hugo, Bootstrap, Blog Theme"
 # images = ["site-feature-image.jpg"]
 
 # logo = "images/logo.png" # Logo image. Default to "images/logo.webp".
-# logo = false # Disable Logo
-brand = "BOOTSTRAP"
+logo = false # Disable Logo
+brand = "While I Remember"
 
 palette = "blue" # Default palette. Optional.
 # palettes = ["blue", "blue gray", "brown"] # Available palettes. Default to ALL.
-# palettes = [] # Disable palette switcher.
+palettes = [] # Disable palette switcher.
 
 # color = "dark" # light, dark or dynamic. Default to dynamic.
 

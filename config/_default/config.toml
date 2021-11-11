@@ -13,7 +13,7 @@ paginate = 5
 # paginatePath = "page"
 
 # Disqus
-disqusShortname = "@ravikh"
+disqusShortname = "blog-mustertech"
 
 # Google analytics
 # googleAnalytics = "UA-123-45"

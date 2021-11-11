@@ -1,23 +1,12 @@
 [[main]]
-  name = "Github"
-  identifier = "repository"
-  pre = '<i class="fab fa-fw fa-github"></i>'
-  url = "https://github.com/ravihara"
-  weight = 99
+name = "LinkedIn"
+identifier = "linkedin"
+pre = '<i class="fab fa-fw fa-linkedin-in"></i>'
+url = "https://linkedin.com/in/raviharanath/"
+weight = 99
 [[main]]
-  name = "Networks"
-  identifier = "networks"
-  pre = '<i class="fas fa-fw fa-chevron-circle-down"></i>'
-  weight = 100
-[[main]]
-  id = "linkedin"
-  parent = "networks"
-  name = "LinkedIn"
-  weight = 1
-  url = "https://linkedin.com/in/raviharanath/"
-[[main]]
-  id = "twitter"
-  parent = "networks"
-  name = "Twitter"
-  weight = 2
-  url = "https://twitter.com/ahikrv"
+name = "Github"
+identifier = "github"
+pre = '<i class="fab fa-fw fa-github"></i>'
+url = "https://github.com/ravihara"
+weight = 100
