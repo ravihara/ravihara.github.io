@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://ravihara.github.io/sitemap.xml
