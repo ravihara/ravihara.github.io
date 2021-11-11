@@ -1,7 +1,7 @@
-baseURL = "https://example.com"
-title = "Hugo Bootstrap"
+baseURL = "https://ravihara.github.io"
+title = "While I remember"
 theme = "hugo-theme-bootstrap"
-copyright = "Copyright © 2016-{year} Razon Yang. All Rights Reserved."
+copyright = "Copyright © 2021-{year} Ravishankar Haranath. All Rights Reserved."
 
 # Multilingual mode
 defaultContentLanguage = "en"
@@ -13,7 +13,7 @@ paginate = 5
 # paginatePath = "page"
 
 # Disqus
-# disqusShortname = "yourdiscussshortname"
+disqusShortname = "@ravikh"
 
 # Google analytics
 # googleAnalytics = "UA-123-45"
@@ -27,12 +27,12 @@ enableEmoji = true
 pygmentsUseClasses = true
 
 [blackfriday]
-  hrefTargetBlank = true
+hrefTargetBlank = true
 
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+home = ["HTML", "RSS", "JSON"]
 
 [taxonomies]
-  category = "categories"
-  series = "series"
-  tag = "tags"
+category = "categories"
+series = "series"
+tag = "tags"

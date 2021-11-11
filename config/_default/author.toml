@@ -1,12 +1,13 @@
-name = "Razon Yang"
-# avatar = "images/profile.png" # Avatar image. Default to "images/profile.webp".
-bio = "Gopher, PHPer, Full Stack Engineer."
-company = "Company"
-location = "Earth"
+name = "Ravishankar Haranath"
+avatar = "images/profile.png"                      # Avatar image. Default to "images/profile.webp".
+bio = "Golang, JS/Node, Java-SE, Cloud and DevOps"
+company = "Business with FOSS"
+location = "Bengaluru"
+
 # alternatives:
 # location = "<a href='https://www.openstreetmap.org/search?query=Earth'>Earth</a>"
 # location = "<a href='https://www.google.com/maps/search/Earth'>Earth</a>"
 # about = "https://domain.tld" # The external about page. The internal about page will be used if not set.
 
 [params]
-  #layout = "compact"
+#layout = "compact"
