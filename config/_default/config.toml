@@ -1,4 +1,4 @@
-baseURL = "https://ravihara.github.io"
+baseURL = "https://blog.mustertech.org"
 title = "While I remember"
 theme = "hugo-theme-bootstrap"
 copyright = "Copyright © 2021-{year} Ravishankar Haranath. All Rights Reserved."
