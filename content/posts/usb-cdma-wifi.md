@@ -50,7 +50,7 @@ This process involves the following main steps.
 
 1. Open a terminal and the command `sudo bash` in order to enter BASH as super-user.
 2. Edit the file `/etc/modules` and append the following lines if they do not already exist.
-   Check and use the appropriate values for `vendor` and `product` for the USB modem, by
+   Check and use the appropriate values for `vendor` and `product` ids for the USB modem, by
    referring to the file `/proc/bus/usb/devices`.<br/><br/>
 
     ```bash
@@ -89,3 +89,73 @@ This process involves the following main steps.
 3. Save and close the file.
 4. Take a backup of `/etc/resolv.conf` then, clear all the content of `/etc/resolv.conf` and save it.
 5. Run `wvdial` to initiate the PPP connection.
+
+### NAT forwarding with iptables
+
+In this step, we will be configuring the NAT table to masquerade ppp0 network interface
+and configure forwarding rule for the ethernet interface.
+
+1. Open a terminal and the command `sudo bash` in order to enter BASH as super-user.
+2. Create or open the file `/usr/local/sbin/ppp_eth_route` and enter the following content.
+    If the file altready exists, first take a backup and then replace its content with the following.
+
+    ```bash
+    #!/bin/bash
+
+    iptables —flush
+    iptables —table nat —flush
+
+    iptables —delete-chain
+    iptables —table nat —delete-chain
+
+    # Set up IP FORWARDing and Masquerading
+    iptables —table nat —append POSTROUTING —out-interface ppp0 -j MASQUERADE
+    iptables —append FORWARD —in-interface eth0 -j ACCEPT
+
+    echo 1 > /proc/sys/net/ipv4/ip_forward
+    ```
+
+3. Save the file and change its permission to 0755 using the command;
+
+    ```bash
+    chown 755 /usr/local/sbin/ppp_eth_route
+    ```
+
+4. Run the `ppp_eth_route` script created above.
+
+### Setting up local DNS and DHCP server
+
+We will be using the `dnsmasq` tool to setup a DHCP server and configure the DNS host resolution.
+
+1. Open a terminal and the command `sudo bash` in order to enter BASH as super-user.
+2. Edit the file `/etc/network/interfaces` and replace it's content with the following.
+    It is recommended to take a backup of the file before changing it's content.
+
+  ```bash
+  auth eth0
+  iface eth0 inet static
+  address 10.10.1.1
+  netmask 255.255.255.0
+  ```
+
+  Save and close the file.
+3. Edit the file `/etc/dnsmasq.conf` as follows. Then, save and close the file.
+
+   1. Uncomment the line containing `interface=eth0`
+   2. Uncomment the line that starts with `dhcp-range` to enable integrated DHCP server. The line
+      must be edited as `dhcp-range=10.10.1.10,10.10.1.200,12h`
+
+  Here, the `dnsmasq` tool is allowed to provide IPs in the range 10.10.1.10 to 10.10.1.200 with a lease time of 12 hours.
+4. Restart the system services - `network-manager` and `dnsmasq`.
+
+NOTE: The above steps are one time activity. For subsequent use, you need to run the following steps
+as superuser (i.e., sudo). You need to ensure the USB modem and the WiFi router are properly connected to
+the Linux machine before proceeding.
+
+1. Restart the system `networking / network-manager` service.
+2. Run `wvdial &`. Wait till it fetches IP address and DNS entries. Otherwise, there is no use
+   in proceeding further since, there is likely a PPP connection issue.
+3. Run `/usr/local/sbin/ppp_eth_route`.
+4. Restart the system `dnsmasq` service.
+
+Of course, you can put the above commands in a shell script and run them as super-user. That's it!
