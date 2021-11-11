@@ -200,14 +200,14 @@ If the file altready exists, first take a backup and then replace its content wi
 <pre><code class=language-bash>#!/bin/bash
 
 
-iptables —table nat —flush
+iptables --table nat --flush
 
 
-iptables —table nat —delete-chain
+iptables --table nat --delete-chain
 
 
-iptables —table nat —append POSTROUTING —out-interface ppp0 -j MASQUERADE
-iptables —append FORWARD —in-interface eth0 -j ACCEPT
+iptables --table nat --append POSTROUTING --out-interface ppp0 -j MASQUERADE
+iptables --append FORWARD --in-interface eth0 -j ACCEPT
 
 
 </code></pre>
