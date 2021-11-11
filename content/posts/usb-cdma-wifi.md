@@ -101,17 +101,14 @@ and configure forwarding rule for the ethernet interface.
 
     ```bash
     #!/bin/bash
-
+    ## Flush the nat table
     iptables --flush
     iptables --table nat --flush
-
     iptables --delete-chain
     iptables --table nat --delete-chain
-
-    # Set up IP forwarding and masquerading
+    ## Set up IP forwarding and masquerading
     iptables --table nat --append POSTROUTING --out-interface ppp0 -j MASQUERADE
     iptables --append FORWARD --in-interface eth0 -j ACCEPT
-
     echo 1 > /proc/sys/net/ipv4/ip_forward
     ```
 

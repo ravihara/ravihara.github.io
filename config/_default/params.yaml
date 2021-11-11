@@ -32,6 +32,7 @@ highlight:
       - json
       - yaml
       - typescript
+      - markdown
     # See https://github.com/highlightjs/cdn-release/tree/master/build/styles for available styles.
     style: solarized-light
 
