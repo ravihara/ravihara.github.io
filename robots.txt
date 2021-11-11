@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://ravihara.github.io/sitemap.xml
+Sitemap: https://blog.mustertech.org/sitemap.xml
