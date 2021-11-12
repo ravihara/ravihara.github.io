@@ -17,6 +17,7 @@ disqusShortname = "blog-mustertech"
 
 # Google analytics
 # googleAnalytics = "UA-123-45"
+googleAnalytics = "G-SENF1JV3MB"
 
 enableRobotsTXT = true
 
