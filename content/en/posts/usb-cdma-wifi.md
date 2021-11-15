@@ -9,14 +9,15 @@ toc = true
 reward = true
 diagram = true
 categories = [
-  "Linux",
+  "Ubuntu",
   "Networking"
 ]
 tags = [
   "wifi",
   "cdma",
   "home",
-  "linux"
+  "linux",
+  "ubuntu"
 ]
 series = [
   "Manual"
@@ -146,26 +147,27 @@ We will be using the `dnsmasq` tool to setup a DHCP server and configure the DNS
 2. Edit the file `/etc/network/interfaces` and replace it's content with the following.
     It is recommended to take a backup of the file before changing it's content.
 
-  ```bash
-  auth eth0
-  iface eth0 inet static
-  address 10.10.1.1
-  netmask 255.255.255.0
-  ```
+    ```bash
+    auth eth0
+    iface eth0 inet static
+    address 10.10.1.1
+    netmask 255.255.255.0
+    ```
 
-  Save and close the file.
+    Save and close the file.
 3. Edit the file `/etc/dnsmasq.conf` as follows. Then, save and close the file.
 
-   1. Uncomment the line containing `interface=eth0`
-   2. Uncomment the line that starts with `dhcp-range` to enable integrated DHCP server. The line
+    1. Uncomment the line containing `interface=eth0`
+    2. Uncomment the line that starts with `dhcp-range` to enable integrated DHCP server. The line
       must be edited as `dhcp-range=10.10.1.10,10.10.1.200,12h`
 
-  Here, the `dnsmasq` tool is allowed to provide IPs in the range 10.10.1.10 to 10.10.1.200 with a lease time of 12 hours.
+    Here, the `dnsmasq` tool is allowed to provide IPs in the range 10.10.1.10 to 10.10.1.200 with a lease time of 12 hours.
 4. Restart the system services - `network-manager` and `dnsmasq`.
 
-NOTE: The above steps are one time activity. For subsequent use, you need to run the following steps
-as superuser (i.e., sudo). You need to ensure the USB modem and the WiFi router are properly connected to
-the Linux machine before proceeding.
+{{< note title="NOTE" >}}
+The above steps are one time activity. For subsequent use, you need to run the following steps as superuser (i.e., sudo).
+You need to ensure the USB modem and the WiFi router are properly connected to the Linux machine.
+{{< /note >}}
 
 1. Restart the system `networking / network-manager` service.
 2. Run `wvdial &`. Wait till it fetches IP address and DNS entries. Otherwise, there is no use
