@@ -4,5 +4,11 @@
   },
   "MD033": {
     "allowed_elements": ["div", "span", "code", "p", "style", "br"]
-  }
+  },
+  "MD022": false,
+  "MD023": false,
+  "MD024": false,
+  "MD025": false,
+  "MD026": false,
+  "MD003": false
 }

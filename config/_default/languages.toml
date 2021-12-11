@@ -9,6 +9,5 @@ weight = 2
 contentDir = "content/kn"
 
 [kn.params]
-dateFormat = "21-10-2021"
 description = "ನನ್ನ ಕನ್ನಡ ಲೇಖನಗಳ ಸಂಗ್ರಹ"
 keywords = "Hugo, Bootstrap, Thème Blog"

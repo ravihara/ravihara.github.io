@@ -100,7 +100,8 @@ sudo dpkg --configure -a ## Optional, mainly to complete any pending package con
       mount_point="$GDRIVE_BASE/$mount_dir"
 
       CHECK_DRIVE=$(mount | grep -E "$mount_point" | grep -v "grep")
-      [[ -z "${CHECK_DRIVE}" ]] && mkdir -p $mount_point && google-drive-ocamlfuse -label $label $mount_point && sync || echo -e "GDrive for ${label} already mounted"
+      [[ -z "${CHECK_DRIVE}" ]] && mkdir -p $mount_point && google-drive-ocamlfuse -label $label $mount_point && \
+      sync || echo -e "GDrive for ${label} already mounted"
     done
 
     exit 0

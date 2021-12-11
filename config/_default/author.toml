@@ -1,6 +1,6 @@
 name = "Ravishankar Haranath"
 avatar = "images/profile.png"                              # Avatar image. Default to "images/profile.webp".
-bio = "Ubuntu, Golang, JS/Node, Java-SE, Cloud and DevOps"
+bio = "Ubuntu, RHEL, JS/Node, Java-SE, Golang, Cloud and DevOps"
 company = "Business with FOSS"
 location = "Bengaluru"
 
