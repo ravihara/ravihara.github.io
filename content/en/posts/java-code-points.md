@@ -7,6 +7,7 @@ draft = false
 comment = true
 toc = true
 reward = true
+diagram = true
 categories = [
   "programming"
 ]
@@ -18,10 +19,7 @@ tags = [
 series = [
   "Manual"
 ]
-images = []
 +++
-
-<!--more-->
 
 This post captures various best-practices and/or useful suggestions which might come handy while programming in Java.
 These are purely my observations and opinion using Java as the programming language to create backend services and

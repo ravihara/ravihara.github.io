@@ -7,6 +7,7 @@ draft = false
 comment = true
 toc = true
 reward = true
+diagram = true
 categories = [
   "Ubuntu",
   "System"
@@ -20,10 +21,7 @@ tags = [
 series = [
   "Manual"
 ]
-images = []
 +++
-
-<!--more-->
 
 In this post, I'll be describing how to setup automatic mounting of one or more Google Drives locally, on your Ubuntu system.
 Following steps should generally work for the supported Ubuntu versions of the [google-drive-ocamlfuse](https://github.com/astrada/google-drive-ocamlfuse)
