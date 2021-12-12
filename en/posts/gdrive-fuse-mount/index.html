@@ -11,14 +11,14 @@
 <meta name=description content="Mounting Google drive accounts in local folders using google-drive-ocamlfuse tool"><meta itemprop=name content="Mount Google-Drive in Ubuntu">
 <meta itemprop=description content="Mounting Google drive accounts in local folders using google-drive-ocamlfuse tool"><meta itemprop=datePublished content="2021-11-14T13:55:24+05:30">
 <meta itemprop=dateModified content="2021-11-14T13:55:24+05:30">
-<meta itemprop=wordCount content="742">
+<meta itemprop=wordCount content="744">
 <meta itemprop=keywords content="gdrive,google-drive,linux,ubuntu,"><meta property="og:title" content="Mount Google-Drive in Ubuntu">
 <meta property="og:description" content="Mounting Google drive accounts in local folders using google-drive-ocamlfuse tool">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://blog.mustertech.org/en/posts/gdrive-fuse-mount/"><meta property="article:section" content="posts">
 <meta property="article:published_time" content="2021-11-14T13:55:24+05:30">
 <meta property="article:modified_time" content="2021-11-14T13:55:24+05:30">
-<meta property="og:see_also" content="https://blog.mustertech.org/en/posts/usb-cdma-wifi/">
+<meta property="og:see_also" content="https://blog.mustertech.org/en/posts/java-code-points/"><meta property="og:see_also" content="https://blog.mustertech.org/en/posts/usb-cdma-wifi/">
 <meta name=twitter:card content="summary">
 <meta name=twitter:title content="Mount Google-Drive in Ubuntu">
 <meta name=twitter:description content="Mounting Google drive accounts in local folders using google-drive-ocamlfuse tool">
@@ -253,11 +253,12 @@ Edit the values in the <code>configuration block</code> based on your need.
 <span class=ln>36</span>      <span class=nv>mount_point</span><span class=o>=</span><span class=s2>&#34;</span><span class=nv>$GDRIVE_BASE</span><span class=s2>/</span><span class=nv>$mount_dir</span><span class=s2>&#34;</span>
 <span class=ln>37</span>
 <span class=ln>38</span>      <span class=nv>CHECK_DRIVE</span><span class=o>=</span><span class=k>$(</span>mount <span class=p>|</span> grep -E <span class=s2>&#34;</span><span class=nv>$mount_point</span><span class=s2>&#34;</span> <span class=p>|</span> grep -v <span class=s2>&#34;grep&#34;</span><span class=k>)</span>
-<span class=ln>39</span>      <span class=o>[[</span> -z <span class=s2>&#34;</span><span class=si>${</span><span class=nv>CHECK_DRIVE</span><span class=si>}</span><span class=s2>&#34;</span> <span class=o>]]</span> <span class=o>&amp;&amp;</span> mkdir -p <span class=nv>$mount_point</span> <span class=o>&amp;&amp;</span> google-drive-ocamlfuse -label <span class=nv>$label</span> <span class=nv>$mount_point</span> <span class=o>&amp;&amp;</span> sync <span class=o>||</span> <span class=nb>echo</span> -e <span class=s2>&#34;GDrive for </span><span class=si>${</span><span class=nv>label</span><span class=si>}</span><span class=s2> already mounted&#34;</span>
-<span class=ln>40</span>    <span class=k>done</span>
-<span class=ln>41</span>
-<span class=ln>42</span>    <span class=nb>exit</span> <span class=m>0</span>
-<span class=ln>43</span>    </code></pre></div></p>
+<span class=ln>39</span>      <span class=o>[[</span> -z <span class=s2>&#34;</span><span class=si>${</span><span class=nv>CHECK_DRIVE</span><span class=si>}</span><span class=s2>&#34;</span> <span class=o>]]</span> <span class=o>&amp;&amp;</span> mkdir -p <span class=nv>$mount_point</span> <span class=o>&amp;&amp;</span> google-drive-ocamlfuse -label <span class=nv>$label</span> <span class=nv>$mount_point</span> <span class=o>&amp;&amp;</span> <span class=se>\
+</span><span class=ln>40</span><span class=se></span>      sync <span class=o>||</span> <span class=nb>echo</span> -e <span class=s2>&#34;GDrive for </span><span class=si>${</span><span class=nv>label</span><span class=si>}</span><span class=s2> already mounted&#34;</span>
+<span class=ln>41</span>    <span class=k>done</span>
+<span class=ln>42</span>
+<span class=ln>43</span>    <span class=nb>exit</span> <span class=m>0</span>
+<span class=ln>44</span>    </code></pre></div></p>
 </li>
 <li>
 <p>Save the file and close the editor.</p>
@@ -338,11 +339,15 @@ mounted Google drive(s) locally, using File Explorer or by running <code>df -TH<
 <div class="post-nav post-prev"><i class="fas fa-fw fa-chevron-left"></i>
 <a href=https://blog.mustertech.org/en/posts/usb-cdma-wifi/>Home Wifi With CDMA Modem
 </a>
+</div><div class="post-nav post-next">
+<a href=https://blog.mustertech.org/en/posts/java-code-points/>Useful Points for Java Coding
+</a>
+<i class="fas fa-fw fa-chevron-right"></i>
 </div></div><section class=related-posts-wrapper>
 <h3>Related Posts</h3>
 <ul class=related-posts><li><a href=https://blog.mustertech.org/en/posts/usb-cdma-wifi/>Home Wifi With CDMA Modem
-</a></li><li><a href=https://blog.mustertech.org/en/about/>About
-</a></li><li><a href=https://blog.mustertech.org/en/contact/>Contact Us
+</a></li><li><a href=https://blog.mustertech.org/en/about/>About Me
+</a></li><li><a href=https://blog.mustertech.org/en/contact/>Contact Me
 </a></li></ul>
 </section></div>
 </article><div class="card component row post-comments">
@@ -357,20 +362,22 @@ mounted Google drive(s) locally, using File Explorer or by running <code>df -TH<
 <div class=card-body>
 <div class="col-12 d-flex align-items-center justify-content-center"><img class="profile-avatar rounded-circle" alt="Ravishankar Haranath" src=https://blog.mustertech.org/images/profile.png loading=lazy width=1080 height=1080>
 </div>
-<div class="col-12 profile-meta"><div class=profile-name>Ravishankar Haranath</div><div class=profile-bio>Ubuntu, Golang, JS/Node, Java-SE, Cloud and DevOps</div><div class=profile-company><i class="fas fa-fw fa-building"></i>Business with FOSS</div><div class=profile-location><i class="fas fa-fw fa-map-marker-alt"></i>Bengaluru</div><div class=profile-about><i class="fas fa-fw fa-user"></i><a href=https://blog.mustertech.org/en/about/>About</a></div><div class=profile-contact><i class="fas fa-fw fa-question-circle"></i><a href=https://blog.mustertech.org/en/contact/>Contact Us</a></div></div>
+<div class="col-12 profile-meta"><div class=profile-name>Ravishankar Haranath</div><div class=profile-bio>Ubuntu, RHEL, JS/Node, Java-SE, Golang, Cloud and DevOps</div><div class=profile-company><i class="fas fa-fw fa-building"></i>Solutions with FOSS</div><div class=profile-location><i class="fas fa-fw fa-map-marker-alt"></i><a href=https://goo.gl/maps/xw3V1iacBnY3JNRW6 target=_blank>Bengaluru</a></div><div class=profile-about><i class="fas fa-fw fa-user"></i><a href=https://blog.mustertech.org/en/about/>About Me</a></div><div class=profile-contact><i class="fas fa-fw fa-question-circle"></i><a href=https://blog.mustertech.org/en/contact/>Contact Me</a></div></div>
 </div>
 </section>
 <section class="featured-posts row card component">
 <div class=card-body>
 <h2 class=card-title>Featured Posts</h2>
-<ul><li><a href=https://blog.mustertech.org/en/posts/gdrive-fuse-mount/>Mount Google-Drive in Ubuntu
+<ul><li><a href=https://blog.mustertech.org/en/posts/java-code-points/>Useful Points for Java Coding
+</a></li><li><a href=https://blog.mustertech.org/en/posts/gdrive-fuse-mount/>Mount Google-Drive in Ubuntu
 </a></li><li><a href=https://blog.mustertech.org/en/posts/usb-cdma-wifi/>Home Wifi With CDMA Modem
 </a></li></ul>
 </div>
 </section><section class="recent-posts row card component">
 <div class=card-body>
 <h2 class=card-title>Recent Posts</h2>
-<ul><li><a href=https://blog.mustertech.org/en/posts/gdrive-fuse-mount/>Mount Google-Drive in Ubuntu
+<ul><li><a href=https://blog.mustertech.org/en/posts/java-code-points/>Useful Points for Java Coding
+</a></li><li><a href=https://blog.mustertech.org/en/posts/gdrive-fuse-mount/>Mount Google-Drive in Ubuntu
 </a></li><li><a href=https://blog.mustertech.org/en/posts/usb-cdma-wifi/>Home Wifi With CDMA Modem
 </a></li></ul>
 </div>
@@ -383,6 +390,8 @@ mounted Google drive(s) locally, using File Explorer or by running <code>df -TH<
 Ubuntu
 </a><a href=https://blog.mustertech.org/en/categories/networking/ class="badge bg-primary text-white rounded post-taxonomy" title=Networking>
 Networking
+</a><a href=https://blog.mustertech.org/en/categories/programming/ class="badge bg-primary text-white rounded post-taxonomy" title=programming>
+programming
 </a><a href=https://blog.mustertech.org/en/categories/system/ class="badge bg-primary text-white rounded post-taxonomy" title=System>
 System
 </a></div>
@@ -405,14 +414,20 @@ Manual
 linux
 </a><a href=https://blog.mustertech.org/en/tags/ubuntu/ class="badge bg-primary text-white rounded post-taxonomy" title=ubuntu>
 ubuntu
+</a><a href=https://blog.mustertech.org/en/tags/best-practice/ class="badge bg-primary text-white rounded post-taxonomy" title=best-practice>
+best-practice
 </a><a href=https://blog.mustertech.org/en/tags/cdma/ class="badge bg-primary text-white rounded post-taxonomy" title=cdma>
 cdma
+</a><a href=https://blog.mustertech.org/en/tags/coding/ class="badge bg-primary text-white rounded post-taxonomy" title=coding>
+coding
 </a><a href=https://blog.mustertech.org/en/tags/gdrive/ class="badge bg-primary text-white rounded post-taxonomy" title=gdrive>
 gdrive
 </a><a href=https://blog.mustertech.org/en/tags/google-drive/ class="badge bg-primary text-white rounded post-taxonomy" title=google-drive>
 google-drive
 </a><a href=https://blog.mustertech.org/en/tags/home/ class="badge bg-primary text-white rounded post-taxonomy" title=home>
 home
+</a><a href=https://blog.mustertech.org/en/tags/java/ class="badge bg-primary text-white rounded post-taxonomy" title=java>
+java
 </a><a href=https://blog.mustertech.org/en/tags/wifi/ class="badge bg-primary text-white rounded post-taxonomy" title=wifi>
 wifi
 </a></div>
