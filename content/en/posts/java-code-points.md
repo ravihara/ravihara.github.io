@@ -3,7 +3,7 @@ title = "Useful points for Java coding"
 description = "A set of useful points which I learnt while coding in Java"
 date = 2021-12-11T11:55:24+05:30
 featured = true
-draft = true
+draft = false
 comment = true
 toc = true
 reward = true
@@ -62,6 +62,10 @@ Solution:
    to provide base implementation so that, the derived entity classes can skip their implementations as needed.
 2. Extend the abstract class with appropriate entity classes, overriding the methods as required.
 
+{{< tip title="SAMPLE" >}}
+Checkout the sample Java classes - `Shape.java`, `Circle.java`, `Rectangle.java` under [class-vs-iface](https://github.com/mustertech/java-points/tree/main/class-vs-iface).
+{{< /tip >}}
+
 __Entities of different kind, requiring a common set of behavioural signatures.__
 
 The requirement here is to have multiple, unrelated entities, all of which requiring a common set of
@@ -76,6 +80,10 @@ Solution:
 4. In the future, if any new method signature needs to be added to the interface, do provide a default
    implementation so that existing entity classes still satisfy the interface definition. This allows
    the entity classes to provide overridden method implementations in the future, as required.
+
+{{< tip title="SAMPLE" >}}
+Checkout the sample Java classes - `Authenticator.java`, `User.java`, `ClientAuthenticator.java` under [class-vs-iface](https://github.com/mustertech/java-points/tree/main/class-vs-iface).
+{{< /tip >}}
 
 __Entities of mixed kinds, requiring a common set of behavioural signatures.__
 
@@ -93,3 +101,12 @@ Solution:
 5. In the future, if any new method signature needs to be added to the interface, do provide a default
    implementation so that existing classes (abstract or otherwise) still satisfy the interface definition.
    This allows the implementing classes to provide overridden method implementations in the future, as required.
+
+{{< tip title="SAMPLE" >}}
+Checkout the sample Java classes - `Authenticator.java`, `User.java`, `LeadUser.java`, `SalesUser.java`,
+`ClientAuthenticator.java` under [class-vs-iface](https://github.com/mustertech/java-points/tree/main/class-vs-iface).
+{{< /tip >}}
+
+The maven based, sample Java project explaining the above usecases can be found in the
+[class-vs-iface](https://github.com/mustertech/java-points/tree/main/class-vs-iface) module folder of the
+[java-points](https://github.com/mustertech/java-points) git repository;
