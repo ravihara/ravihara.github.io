@@ -44,8 +44,9 @@ let me jot down some of the usecases and try to explain those with an example.
    external events (within the system in which the object belongs and also from the connected ecosystem).
 
 {{< note title="NOTE" >}}
-The term `behavioural siganture` in this article essentially means, a method signature in an interface. The classes
-which implement those behaviours can have completely independent and unrelated implementation details, if needed.
+The term `behavioural siganture` in this article essentially means, a method signature in an interface or a class.
+The classes which implement those behaviours can have completely independent and unrelated implementation details,
+as needed.
 {{< /note >}}
 
 ## Usecases
@@ -59,8 +60,7 @@ Solution:
 
 1. Implement an `abstract base class` with abstract and non-abstract methods. The non-abstract methods are meant
    to provide base implementation so that, the derived entity classes can skip their implementations as needed.
-2. Extend the abstract class with appropriate entity classes, override and implement the abstract methods
-   of the abstract, base class.
+2. Extend the abstract class with appropriate entity classes, overriding the methods as required.
 
 __Entities of different kind, requiring a common set of behavioural signatures.__
 
@@ -88,7 +88,8 @@ Solution:
 2. Define various `abstract classes` implmenting the defined interface, each for a set of closely related entities.
 3. Implement the defined interface directly for entity classes which do not derive from any of the
    abstract class(es) as defined above.
-4. Create various closely related entity classes by extending the appropriate abstract class.
+4. Create various closely related entity classes by extending the appropriate abstract class. Each of them may
+   further override the methods as appropriate.
 5. In the future, if any new method signature needs to be added to the interface, do provide a default
    implementation so that existing classes (abstract or otherwise) still satisfy the interface definition.
    This allows the implementing classes to provide overridden method implementations in the future, as required.

@@ -1,5 +1,5 @@
 +++
-title = "About"
+title = "About Me"
 description = "Personal website of Ravishankar Haranath, created using Hugo"
 date = "2021-11-07"
 aliases = ["about-us", "about-hugo"]

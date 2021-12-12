@@ -1,8 +1,8 @@
 name = "Ravishankar Haranath"
-avatar = "images/profile.png"                              # Avatar image. Default to "images/profile.webp".
+avatar = "images/profile.png"                                                              # Avatar image. Default to "images/profile.webp".
 bio = "Ubuntu, RHEL, JS/Node, Java-SE, Golang, Cloud and DevOps"
-company = "Business with FOSS"
-location = "Bengaluru"
+company = "Solutions with FOSS"
+location = "<a href='https://goo.gl/maps/xw3V1iacBnY3JNRW6' target='_blank'>Bengaluru</a>"
 
 # alternatives:
 # location = "<a href='https://www.openstreetmap.org/search?query=Earth'>Earth</a>"
