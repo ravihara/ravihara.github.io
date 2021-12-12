@@ -82,7 +82,7 @@ Solution:
    the entity classes to provide overridden method implementations in the future, as required.
 
 {{< tip title="SAMPLE" >}}
-Checkout the sample Java classes - `Authenticator.java`, `User.java`, `ClientAuthenticator.java` under [class-vs-iface](https://github.com/mustertech/java-points/tree/main/class-vs-iface).
+Checkout the sample Java classes - `Authenticator.java`, `User.java`, `AppClient.java` under [class-vs-iface](https://github.com/mustertech/java-points/tree/main/class-vs-iface).
 {{< /tip >}}
 
 __Entities of mixed kinds, requiring a common set of behavioural signatures.__
@@ -104,7 +104,7 @@ Solution:
 
 {{< tip title="SAMPLE" >}}
 Checkout the sample Java classes - `Authenticator.java`, `User.java`, `LeadUser.java`, `SalesUser.java`,
-`ClientAuthenticator.java` under [class-vs-iface](https://github.com/mustertech/java-points/tree/main/class-vs-iface).
+`AppClient.java` under [class-vs-iface](https://github.com/mustertech/java-points/tree/main/class-vs-iface).
 {{< /tip >}}
 
 The maven based, sample Java project explaining the above usecases can be found in the
