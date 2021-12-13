@@ -11,8 +11,8 @@
 <meta name=description content="A set of useful points which I learnt while coding in Java"><meta itemprop=name content="Useful points for Java coding">
 <meta itemprop=description content="A set of useful points which I learnt while coding in Java"><meta itemprop=datePublished content="2021-12-11T11:55:24+05:30">
 <meta itemprop=dateModified content="2021-12-11T11:55:24+05:30">
-<meta itemprop=wordCount content="699">
-<meta itemprop=keywords content="java,coding,best-practice,"><meta property="og:title" content="Useful points for Java coding">
+<meta itemprop=wordCount content="792">
+<meta itemprop=keywords content="java,best-practice,"><meta property="og:title" content="Useful points for Java coding">
 <meta property="og:description" content="A set of useful points which I learnt while coding in Java">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://blog.mustertech.org/en/posts/java-code-points/"><meta property="article:section" content="posts">
@@ -165,7 +165,7 @@ English
 <i class="fas fa-fw fa-calendar-alt"></i>Dec 11, 2021
 </span><span class=post-reading-time title="reading time">
 <i class="fas fa-fw fa-coffee"></i>4 min read
-</span><a href=https://blog.mustertech.org/en/categories/programming/ class="badge rounded-pill text-white bg-primary post-taxonomy">programming</a><a href=https://blog.mustertech.org/en/series/manual/ class="badge rounded-pill text-white bg-primary post-taxonomy">Manual</a><a href=https://blog.mustertech.org/en/tags/java/ class="badge rounded-pill text-white bg-primary post-taxonomy">java</a><a href=https://blog.mustertech.org/en/tags/coding/ class="badge rounded-pill text-white bg-primary post-taxonomy">coding</a><a href=https://blog.mustertech.org/en/tags/best-practice/ class="badge rounded-pill text-white bg-primary post-taxonomy">best-practice</a></div>
+</span><a href=https://blog.mustertech.org/en/categories/programming/ class="badge rounded-pill text-white bg-primary post-taxonomy">programming</a><a href=https://blog.mustertech.org/en/series/manual/ class="badge rounded-pill text-white bg-primary post-taxonomy">Manual</a><a href=https://blog.mustertech.org/en/tags/java/ class="badge rounded-pill text-white bg-primary post-taxonomy">java</a><a href=https://blog.mustertech.org/en/tags/best-practice/ class="badge rounded-pill text-white bg-primary post-taxonomy">best-practice</a></div>
 <div class="offcanvas offcanvas-end surface h-100" tabindex=-1 id=offcanvasTOC aria-labelledby=offcanvasTOCLabel>
 <div class=offcanvas-header>
 <h2 class=offcanvas-title id=offcanvasTOCLabel>Table Of Contents</h5>
@@ -217,7 +217,9 @@ to provide base implementation so that, the derived entity classes can skip thei
 </ol>
 <div class="admonition tip">
 <div class=title>SAMPLE</div>
-<div class=content>Checkout the sample Java classes - <code>Shape.java</code>, <code>Circle.java</code>, <code>Rectangle.java</code> under <a href=https://github.com/mustertech/java-points/tree/main/class-vs-iface>class-vs-iface</a>.</div>
+<div class=content>Checkout the sample Java classes - <code>Shape.java</code>, <code>Circle.java</code>, <code>Rectangle.java</code> under
+<a href=https://github.com/mustertech/java-points/tree/main/class-vs-iface>class-vs-iface</a>. Here, the &lsquo;Circle&rsquo; and &lsquo;Rectangle&rsquo;
+classes are of the same kind &lsquo;Shape&rsquo;. Hence, they extend the &lsquo;Shape&rsquo; base class.</div>
 </div>
 <p><strong>Entities of different kind, requiring a common set of behavioural signatures.</strong></p>
 <p>The requirement here is to have multiple, unrelated entities, all of which requiring a common set of
@@ -234,7 +236,10 @@ the entity classes to provide overridden method implementations in the future, a
 </ol>
 <div class="admonition tip">
 <div class=title>SAMPLE</div>
-<div class=content>Checkout the sample Java classes - <code>Authenticator.java</code>, <code>User.java</code>, <code>AppClient.java</code> under <a href=https://github.com/mustertech/java-points/tree/main/class-vs-iface>class-vs-iface</a>.</div>
+<div class=content>Checkout the sample Java classes - <code>Authenticator.java</code>, <code>User.java</code>, <code>AppClient.java</code> under
+<a href=https://github.com/mustertech/java-points/tree/main/class-vs-iface>class-vs-iface</a>. Here, &lsquo;User&rsquo; and &lsquo;AppClient&rsquo; classes
+are of different kind. &lsquo;User&rsquo; class represents a person or, user while &lsquo;AppClient&rsquo; represents a registered, application-client
+for a given web service. Hence, both these classes implement the interface &lsquo;Authenticator&rsquo; independently.</div>
 </div>
 <p><strong>Entities of mixed kinds, requiring a common set of behavioural signatures.</strong></p>
 <p>The requirement here is to have multiple, closely related and unrelated entities, all of which requiring
@@ -254,7 +259,10 @@ This allows the implementing classes to provide overridden method implementation
 <div class="admonition tip">
 <div class=title>SAMPLE</div>
 <div class=content>Checkout the sample Java classes - <code>Authenticator.java</code>, <code>User.java</code>, <code>LeadUser.java</code>, <code>SalesUser.java</code>,
-<code>AppClient.java</code> under <a href=https://github.com/mustertech/java-points/tree/main/class-vs-iface>class-vs-iface</a>.</div>
+<code>AppClient.java</code> under <a href=https://github.com/mustertech/java-points/tree/main/class-vs-iface>class-vs-iface</a>. Here,
+the classes &lsquo;User&rsquo; and &lsquo;AppClient&rsquo; are of different kind and hence, implement the &lsquo;Authenticator&rsquo; interface independently.
+The classes &lsquo;LeadUser&rsquo; and &lsquo;SalesUser&rsquo; are of the kind &lsquo;User&rsquo;. Hence, they extend the &lsquo;User&rsquo; which, also
+satisfies the &lsquo;Authenticator&rsquo; interface.</div>
 </div>
 <p>The maven based, sample Java project explaining the above usecases can be found in the
 <a href=https://github.com/mustertech/java-points/tree/main/class-vs-iface target=_blank rel="noopener noreferrer">class-vs-iface</a>
@@ -366,14 +374,8 @@ ubuntu
 best-practice
 </a><a href=https://blog.mustertech.org/en/tags/cdma/ class="badge bg-primary text-white rounded post-taxonomy" title=cdma>
 cdma
-</a><a href=https://blog.mustertech.org/en/tags/coding/ class="badge bg-primary text-white rounded post-taxonomy" title=coding>
-coding
-</a><a href=https://blog.mustertech.org/en/tags/gdrive/ class="badge bg-primary text-white rounded post-taxonomy" title=gdrive>
-gdrive
 </a><a href=https://blog.mustertech.org/en/tags/google-drive/ class="badge bg-primary text-white rounded post-taxonomy" title=google-drive>
 google-drive
-</a><a href=https://blog.mustertech.org/en/tags/home/ class="badge bg-primary text-white rounded post-taxonomy" title=home>
-home
 </a><a href=https://blog.mustertech.org/en/tags/java/ class="badge bg-primary text-white rounded post-taxonomy" title=java>
 java
 </a><a href=https://blog.mustertech.org/en/tags/wifi/ class="badge bg-primary text-white rounded post-taxonomy" title=wifi>
