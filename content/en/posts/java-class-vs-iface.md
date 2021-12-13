@@ -1,7 +1,7 @@
 +++
-title = "Useful points for Java coding"
-description = "A set of useful points which I learnt while coding in Java"
-date = 2021-12-11T11:55:24+05:30
+title = "Using abstract class and interface in Java"
+description = "A set of conditions to determine when to use an abstract class and when to use interface in Java"
+date = 2021-12-12T11:55:24+05:30
 featured = true
 draft = false
 comment = true
