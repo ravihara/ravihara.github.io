@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://blog.mustertech.org/sitemap.xml
+Sitemap: https://www.ravihara.in/sitemap.xml
