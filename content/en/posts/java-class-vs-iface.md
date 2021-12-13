@@ -61,7 +61,7 @@ Solution:
 
 {{< tip title="SAMPLE" >}}
 Checkout the sample Java classes - `Shape.java`, `Circle.java`, `Rectangle.java` under
-[class-vs-iface](https://github.com/mustertech/java-points/tree/main/class-vs-iface). Here, the 'Circle' and 'Rectangle'
+[class-vs-iface](https://github.com/ravihara/java-points/tree/main/class-vs-iface). Here, the 'Circle' and 'Rectangle'
 classes are of the same kind 'Shape'. Hence, they extend the 'Shape' base class.
 {{< /tip >}}
 
@@ -82,7 +82,7 @@ Solution:
 
 {{< tip title="SAMPLE" >}}
 Checkout the sample Java classes - `Authenticator.java`, `User.java`, `AppClient.java` under
-[class-vs-iface](https://github.com/mustertech/java-points/tree/main/class-vs-iface). Here, 'User' and 'AppClient' classes
+[class-vs-iface](https://github.com/ravihara/java-points/tree/main/class-vs-iface). Here, 'User' and 'AppClient' classes
 are of different kind. 'User' class represents a person or, user while 'AppClient' represents a registered, application-client
 for a given web service. Hence, both these classes implement the interface 'Authenticator' independently.
 {{< /tip >}}
@@ -106,12 +106,12 @@ Solution:
 
 {{< tip title="SAMPLE" >}}
 Checkout the sample Java classes - `Authenticator.java`, `User.java`, `LeadUser.java`, `SalesUser.java`,
-`AppClient.java` under [class-vs-iface](https://github.com/mustertech/java-points/tree/main/class-vs-iface). Here,
+`AppClient.java` under [class-vs-iface](https://github.com/ravihara/java-points/tree/main/class-vs-iface). Here,
 the classes 'User' and 'AppClient' are of different kind and hence, implement the 'Authenticator' interface independently.
 The classes 'LeadUser' and 'SalesUser' are of the kind 'User'. Hence, they extend the 'User' which, also
 satisfies the 'Authenticator' interface.
 {{< /tip >}}
 
 The maven based, sample Java project explaining the above usecases can be found in the
-[class-vs-iface](https://github.com/mustertech/java-points/tree/main/class-vs-iface) module folder of the
-[java-points](https://github.com/mustertech/java-points) git repository;
+[class-vs-iface](https://github.com/ravihara/java-points/tree/main/class-vs-iface) module folder of the
+[java-points](https://github.com/ravihara/java-points) git repository;

@@ -1,4 +1,4 @@
-baseURL = "https://blog.mustertech.org"
+baseURL = "https://www.ravihara.in"
 title = "While I remember"
 theme = "hugo-theme-bootstrap"
 copyright = "Copyright © 2021-{year} Ravishankar Haranath. All Rights Reserved."
@@ -13,11 +13,11 @@ paginate = 5
 # paginatePath = "page"
 
 # Disqus
-disqusShortname = "blog-mustertech"
+disqusShortname = "www-ravihara-in"
 
 # Google analytics
 # googleAnalytics = "UA-123-45"
-googleAnalytics = "G-SENF1JV3MB"
+googleAnalytics = "G-4HKE7YS2EG"
 
 enableRobotsTXT = true
 
