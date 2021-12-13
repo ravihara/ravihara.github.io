@@ -15,7 +15,6 @@ categories = [
 tags = [
   "wifi",
   "cdma",
-  "home",
   "linux",
   "ubuntu"
 ]

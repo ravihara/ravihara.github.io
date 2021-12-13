@@ -13,7 +13,6 @@ categories = [
   "System"
 ]
 tags = [
-  "gdrive",
   "google-drive",
   "linux",
   "ubuntu"

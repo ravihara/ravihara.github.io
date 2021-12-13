@@ -13,7 +13,6 @@ categories = [
 ]
 tags = [
   "java",
-  "coding",
   "best-practice"
 ]
 series = [
@@ -61,7 +60,9 @@ Solution:
 2. Extend the abstract class with appropriate entity classes, overriding the methods as required.
 
 {{< tip title="SAMPLE" >}}
-Checkout the sample Java classes - `Shape.java`, `Circle.java`, `Rectangle.java` under [class-vs-iface](https://github.com/mustertech/java-points/tree/main/class-vs-iface).
+Checkout the sample Java classes - `Shape.java`, `Circle.java`, `Rectangle.java` under
+[class-vs-iface](https://github.com/mustertech/java-points/tree/main/class-vs-iface). Here, the 'Circle' and 'Rectangle'
+classes are of the same kind 'Shape'. Hence, they extend the 'Shape' base class.
 {{< /tip >}}
 
 __Entities of different kind, requiring a common set of behavioural signatures.__
@@ -80,7 +81,10 @@ Solution:
    the entity classes to provide overridden method implementations in the future, as required.
 
 {{< tip title="SAMPLE" >}}
-Checkout the sample Java classes - `Authenticator.java`, `User.java`, `AppClient.java` under [class-vs-iface](https://github.com/mustertech/java-points/tree/main/class-vs-iface).
+Checkout the sample Java classes - `Authenticator.java`, `User.java`, `AppClient.java` under
+[class-vs-iface](https://github.com/mustertech/java-points/tree/main/class-vs-iface). Here, 'User' and 'AppClient' classes
+are of different kind. 'User' class represents a person or, user while 'AppClient' represents a registered, application-client
+for a given web service. Hence, both these classes implement the interface 'Authenticator' independently.
 {{< /tip >}}
 
 __Entities of mixed kinds, requiring a common set of behavioural signatures.__
@@ -102,7 +106,10 @@ Solution:
 
 {{< tip title="SAMPLE" >}}
 Checkout the sample Java classes - `Authenticator.java`, `User.java`, `LeadUser.java`, `SalesUser.java`,
-`AppClient.java` under [class-vs-iface](https://github.com/mustertech/java-points/tree/main/class-vs-iface).
+`AppClient.java` under [class-vs-iface](https://github.com/mustertech/java-points/tree/main/class-vs-iface). Here,
+the classes 'User' and 'AppClient' are of different kind and hence, implement the 'Authenticator' interface independently.
+The classes 'LeadUser' and 'SalesUser' are of the kind 'User'. Hence, they extend the 'User' which, also
+satisfies the 'Authenticator' interface.
 {{< /tip >}}
 
 The maven based, sample Java project explaining the above usecases can be found in the
