@@ -7,8 +7,8 @@ keywords = "Hugo, Bootstrap, Blog Theme"
 # images = ["site-feature-image.jpg"]
 
 # logo = "images/logo.png" # Logo image. Default to "images/logo.webp".
-logo = false # Disable Logo
-brand = "While I Remember"
+logo = false        # Disable Logo
+brand = "Ravi-Hara"
 
 palette = "blue" # Default palette. Optional.
 # palettes = ["blue", "blue gray", "brown"] # Available palettes. Default to ALL.
