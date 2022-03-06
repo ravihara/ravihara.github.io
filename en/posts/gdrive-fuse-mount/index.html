@@ -1,17 +1,17 @@
-<!doctype html><html lang=en>
+<!doctype html><html lang=en data-palette=blue>
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<title>Mount Google-Drive in Ubuntu - Ravi-Hara</title><link rel=apple-touch-icon href=https://www.ravihara.in/images/favicons/apple-touch-icon.png sizes=180x180>
-<link rel=icon href=https://www.ravihara.in/images/favicons/favicon-32x32.png sizes=32x32 type=image/png>
-<link rel=icon href=https://www.ravihara.in/images/favicons/favicon-16x16.png sizes=16x16 type=image/png>
-<link rel=manifest href=https://www.ravihara.in/images/favicons/manifest.json>
-<link rel=icon href=https://www.ravihara.in/images/favicons/favicon.ico>
+<title>Mount Google-Drive in Ubuntu - Ravi-Hara</title><link rel=apple-touch-icon href=https://www.ravihara.in/images/icons/icon-180x180.png sizes=180x180>
+<link rel=icon href=https://www.ravihara.in/images/icons/icon-32x32.png sizes=32x32 type=image/png>
+<link rel=icon href=https://www.ravihara.in/images/icons/icon-16x16.png sizes=16x16 type=image/png>
+<link rel=icon href=https://www.ravihara.in/images/icons/favicon.ico>
+<link rel=manifest href=https://www.ravihara.in/en/manifest.json>
 <meta name=keywords content>
 <meta name=description content="Mounting Google drive accounts in local folders using google-drive-ocamlfuse tool"><meta itemprop=name content="Mount Google-Drive in Ubuntu">
 <meta itemprop=description content="Mounting Google drive accounts in local folders using google-drive-ocamlfuse tool"><meta itemprop=datePublished content="2021-11-14T13:55:24+05:30">
 <meta itemprop=dateModified content="2021-11-14T13:55:24+05:30">
-<meta itemprop=wordCount content="744">
+<meta itemprop=wordCount content="700">
 <meta itemprop=keywords content="google-drive,linux,ubuntu,"><meta property="og:title" content="Mount Google-Drive in Ubuntu">
 <meta property="og:description" content="Mounting Google drive accounts in local folders using google-drive-ocamlfuse tool">
 <meta property="og:type" content="article">
@@ -23,90 +23,72 @@
 <meta name=twitter:title content="Mount Google-Drive in Ubuntu">
 <meta name=twitter:description content="Mounting Google drive accounts in local folders using google-drive-ocamlfuse tool">
 <meta name=twitter:site content="@ahikrv">
-<link rel=preload href=https://www.ravihara.in/css/bundle.min.eb6909de0c3ba6cd72d585f48552a32816b9dde206caf3e20ea340390eaa6058.css integrity="sha256-62kJ3gw7ps1y1YX0hVKjKBa53eIGyvPiDqNAOQ6qYFg=" crossorigin=anonymous as=style onload="this.rel='stylesheet'">
-<noscript><link rel=stylesheet href=https://www.ravihara.in/css/bundle.min.eb6909de0c3ba6cd72d585f48552a32816b9dde206caf3e20ea340390eaa6058.css integrity="sha256-62kJ3gw7ps1y1YX0hVKjKBa53eIGyvPiDqNAOQ6qYFg=" crossorigin=anonymous></noscript></head>
-<body><script src=https://www.ravihara.in/js/bootstrap.min.b5d86dd3a5f60c90be38a252bb65fc1a2732f32e71dc12c051720f0c7aef3cde.js integrity="sha256-tdht06X2DJC+OKJSu2X8Gicy8y5x3BLAUXIPDHrvPN4=" crossorigin=anonymous></script><header><nav class="navbar top-app-bar top-app-bar-expand-lg fixed-top">
+<meta property="og:image" content="https://www.ravihara.in/false">
+<meta name=twitter:image content="https://www.ravihara.in/false"><link rel=stylesheet href=https://www.ravihara.in/css/main.min.b5c014fa0a4da377ae0690df6b30d6adc984f754c54c3984d343024abd4171a6.css integrity="sha256-tcAU+gpNo3euBpDfazDWrcmE91TFTDmE00MCSr1BcaY=" crossorigin=anonymous><link rel=stylesheet href=https://www.ravihara.in/css/viewer.min.3d228794bcedbbfa0412beb8fbc1ec6973202945e42af7004f742a4d7bd620ab.css integrity="sha256-PSKHlLztu/oEEr64+8HsaXMgKUXkKvcAT3QqTXvWIKs=" crossorigin=anonymous></head><body><script>const items=["mode","palette"];items.forEach(function(e){const t=localStorage.getItem("hbs-"+e);t&&document.body.parentElement.setAttribute("data-"+e,t)})</script><header><nav class="navbar top-app-bar top-app-bar-expand-lg fixed-top">
 <div class=container>
 <button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarSupportedContent aria-controls=navbarSupportedContent aria-expanded=false aria-label="Toggle navigation">
 <i class="fas fa-bars"></i>
-</button><a class="navbar-brand me-3" href=https://www.ravihara.in/en/>Ravi-Hara
+</button><a class="navbar-brand flex-grow-1 flex-lg-grow-0 text-center text-lg-start mx-auto me-lg-3" href=https://www.ravihara.in/en/>Ravi-Hara
 </a>
-<button class=navbar-social-share type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasSocialShare aria-controls=offcanvasSocialShare aria-label="Toggle social share">
-<i class="fas fa-share-alt"></i>
-</button>
 <div class="offcanvas offcanvas-bottom surface" tabindex=-1 id=offcanvasSocialShare aria-labelledby=offcanvasSocialShare>
 <div class=offcanvas-header>
-<h3 class=offcanvas-title>Share</h3>
-<button type=button class="btn btn-sm btn-outline-primary" data-bs-dismiss=offcanvas aria-label=Close>
+<h3 class=offcanvas-title>Share</h3><button type=button class="btn btn-sm btn-outline-primary" data-bs-dismiss=offcanvas aria-label=Close>
 <i class="fas fa-times"></i>
 </button>
-</div>
-<div class=offcanvas-body>
+</div><div class=offcanvas-body>
 <a class="btn btn-sm btn-outline-primary social-share-button" rel="noopener noreferrer" aria-label="Twitter Share Button" target=_blank href="https://twitter.com/intent/tweet?title=Mount%20Google-Drive%20in%20Ubuntu&url=https%3a%2f%2fwww.ravihara.in%2fen%2fposts%2fgdrive-fuse-mount%2f">
 <i class="fab fa-fw fa-twitter"></i> Twitter
 </a>
 <a class="btn btn-sm btn-outline-primary social-share-button" rel="noopener noreferrer" aria-label="Facebook Share Button" target=_blank href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.ravihara.in%2fen%2fposts%2fgdrive-fuse-mount%2f">
 <i class="fab fa-fw fa-facebook-f"></i> Facebook
 </a>
-</div>
-</div>
-<button class=navbar-settings type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasSettings aria-controls=offcanvasSettings aria-label="Toggle settings">
+</div></div><button class=navbar-settings type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasSettings aria-controls=offcanvasSettings aria-label="Toggle settings">
 <i class="fas fa-ellipsis-v"></i>
 </button>
 <div class="offcanvas offcanvas-end surface h-100" tabindex=-1 id=offcanvasSettings aria-labelledby=offcanvasSettings>
 <div class=offcanvas-header>
-<h3 class=offcanvas-title>Settings</h3>
-<button type=button class="btn btn-sm btn-outline-primary" data-bs-dismiss=offcanvas aria-label=Close>
+<h3 class=offcanvas-title>Settings</h3><button type=button class="btn btn-sm btn-outline-primary" data-bs-dismiss=offcanvas aria-label=Close>
 <i class="fas fa-times"></i>
 </button>
-</div>
-<div class=offcanvas-body><section class=setting>
+</div><div class="offcanvas-body d-flex flex-column"><section class=setting>
 <form class=row>
 <div class=col-auto>
 <label for=fontSize class=form-label><i class="fas fa-fw fa-language"></i> Language</label>
-</div>
-<div class="col-auto ms-auto">
+</div><div class="col-auto ms-auto">
 <div class=dropdown>
 <a class="btn btn-sm btn-outline-primary dropdown-toggle" href=# id=languageDropdown role=button data-bs-toggle=dropdown aria-expanded=false>
 English
 </a>
-<ul class="dropdown-menu dropdown-menu-end" aria-labelledby=languageDropdown><li><a class=dropdown-item href=https://www.ravihara.in/kn/>ಕನ್ನಡ</a></li></ul>
-</div>
-</div>
-</form>
-</section>
-<section class=setting>
+<ul class="dropdown-menu dropdown-menu-end" aria-labelledby=languageDropdown><li><a class=dropdown-item href=https://www.ravihara.in/kn/>ಕನ್ನಡ</a></li></ul></div></div></form></section><section class=setting>
 <form class=row>
 <div class=col-auto>
 <label><i class="fas fa-fw fa-adjust"></i> Mode</label>
-</div>
-<div class="col-auto ms-auto">
+</div><div class="col-auto ms-auto">
 <div class="form-check form-switch">
 <input class=form-check-input type=checkbox id=modeSwitcher>
-</div>
-</div>
-</form>
-</section>
-<section class=setting>
+</div></div></form></section><section class=setting>
 <form class="font-size-switcher-form row">
 <div class=col-auto>
 <label for=fontSize class=form-label><i class="fas fa-fw fa-font"></i> Font Size</label>
-</div>
-<div class="col-auto ms-auto">
+</div><div class="col-auto ms-auto">
 <input type=range class=form-range min=-2 max=2 id=fontSize>
-</div>
-</form>
-</section>
-</div>
-</div>
-<div class="collapse navbar-collapse" tabindex=-1 id=navbarSupportedContent aria-labelledby=navbarSupportedContent>
+</div></form></section><section class="setting actions d-flex justify-content-around mt-auto overflow-auto">
+<a role=button class="action action-go-back" href="javascript: window.history.back();">
+<span class=action-icon><i class="fas fa-2x fa-arrow-left"></i></span> Go back
+</a>
+<a role=button class="action action-reload-page">
+<span class=action-icon><i class="fas fa-2x fa-redo-alt"></i></span> Reload
+</a>
+<a role=button class="action action-copy-url">
+<span class=action-icon><i class="fas fa-2x fa-link"></i></span> Copy URL
+</a><a class="action action-social-share" type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasSocialShare aria-controls=offcanvasSocialShare aria-label="Toggle social share">
+<span class=action-icon><i class="fas fa-2x fa-share-alt"></i></span> Share
+</a></section></div></div><div class="collapse navbar-collapse" tabindex=-1 id=navbarSupportedContent aria-labelledby=navbarSupportedContent>
 <form class="search-bar my-1" action=https://www.ravihara.in/en/search>
 <div class="input-group input-group-sm">
 <span class="btn btn-search disabled position-absolute left-0"><i class="fas fa-fw fa-search"></i></span>
 <input class="form-control rounded-pill" name=q type=search aria-label=Search>
-</div>
-</form>
-<ul class="navbar-nav ms-auto"><li class=nav-item>
+</div></form><ul class="navbar-nav ms-auto"><li class=nav-item>
 <a class=nav-link href=https://www.ravihara.in/en/archives/>
 <i class="fas fa-fw fa-file-archive"></i>Archives
 </a>
@@ -130,195 +112,130 @@ English
 <a class=nav-link href=https://github.com/ravihara target=_blank rel="noopener noreferrer">
 <i class="fab fa-fw fa-github"></i>Github
 </a>
-</li></ul>
-</div>
-</div>
-</nav>
-</header>
-<main role=main class=container>
+</li></ul></div></div></nav></header><main role=main class=container>
 <div class="row content">
 <div class=col-lg-8>
 <div class=container><nav class="row card component" aria-label=breadcrumb>
 <div class=card-body>
-<ol class=breadcrumb><li class=breadcrumb-item><a href=https://www.ravihara.in/en/>Home</a></li><li class=breadcrumb-item><a href=https://www.ravihara.in/en/posts/>Posts</a></li><li class="breadcrumb-item active">Mount Google-Drive in Ubuntu</li></ol>
-</div>
-</nav> <article class="row card component mb-4 post"><div class=post-panel-wrapper>
+<ol class=breadcrumb><li class=breadcrumb-item><a href=https://www.ravihara.in/en/>Home</a></li><li class=breadcrumb-item><a href=https://www.ravihara.in/en/posts/>Posts</a></li><li class="breadcrumb-item active">Mount Google-Drive in Ubuntu</li></ol></div></nav><div class=post-panel-wrapper>
 <div class="d-flex flex-column component rounded post-panel">
-<a id=sidebarToggler class="action d-none d-lg-block" role=button>
+<a class="action action-panel-toggler" role=button title="Panel toggler">
+<i class="fas fa-fw fa-chevron-circle-down"></i>
+</a>
+<a id=sidebarToggler class="action d-none d-lg-block" role=button title="Sidebar toggler">
 <i class="fas fa-fw fa-expand-alt" data-fa-transform=rotate-45></i>
 </a>
 <a class="action btn-reward" role=button data-bs-toggle=modal data-bs-target=#rewardModal title="Buy me a coffee">
 <i class="fas fa-fw fa-coffee"></i>
 </a>
-<a class=action data-bs-container=body data-bs-toggle=popover data-bs-html=true data-bs-placement=bottom data-bs-trigger=focus tabindex=0 role=button aria-label=Copyright data-bs-content='<a target="_blank" rel="license noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en">CC BY-NC-ND 4.0 <i class="fab fa-fw fa-creative-commons"></i><i class="fab fa-fw fa-creative-commons-by"></i><i class="fab fa-fw fa-creative-commons-nc"></i><i class="fab fa-fw fa-creative-commons-nd"></i></a>
-'>
+<a class=action href=#post-copyright role=button aria-label=Copyright title=Copyright>
 <i class="fas fa-fw fa-copyright"></i>
 </a>
-<a class=action data-bs-toggle=offcanvas href=#offcanvasTOC aria-controls=offcanvasTOC role=button>
+<a class=action href=#post-comments role=button aria-label=Comments title=Comments>
+<i class="fas fa-fw fa-comments"></i>
+</a>
+<a class=action href=#postTOC aria-controls="Table of contents" role=button title="Table of contents">
 <i class="fas fa-fw fa-list-alt"></i>
 </a>
-</div>
-</div>
-<div class=card-body>
-<h1 class="card-title my-3">Mount Google-Drive in Ubuntu
-</h1><div class=post-meta><span class=post-date title="created on">
-<i class="fas fa-fw fa-calendar-alt"></i>Nov 14, 2021
-</span><span class=post-reading-time title="reading time">
-<i class="fas fa-fw fa-coffee"></i>4 min read
-</span><a href=https://www.ravihara.in/en/categories/ubuntu/ class="badge rounded-pill text-white bg-primary post-taxonomy">Ubuntu</a><a href=https://www.ravihara.in/en/categories/system/ class="badge rounded-pill text-white bg-primary post-taxonomy">System</a><a href=https://www.ravihara.in/en/series/manual/ class="badge rounded-pill text-white bg-primary post-taxonomy">Manual</a><a href=https://www.ravihara.in/en/tags/google-drive/ class="badge rounded-pill text-white bg-primary post-taxonomy">google-drive</a><a href=https://www.ravihara.in/en/tags/linux/ class="badge rounded-pill text-white bg-primary post-taxonomy">linux</a><a href=https://www.ravihara.in/en/tags/ubuntu/ class="badge rounded-pill text-white bg-primary post-taxonomy">ubuntu</a></div>
-<div class="offcanvas offcanvas-end surface h-100" tabindex=-1 id=offcanvasTOC aria-labelledby=offcanvasTOCLabel>
-<div class=offcanvas-header>
-<h2 class=offcanvas-title id=offcanvasTOCLabel>Table Of Contents</h5>
-<button type=button class="btn btn-sm btn-outline-primary" data-bs-dismiss=offcanvas aria-label=Close>
-<i class="fas fa-times"></i>
-</button>
-</div>
-<div class=offcanvas-body>
-<nav id=TableOfContents>
-<ul>
-<li><a href=#assumptions>Assumptions</a></li>
-<li><a href=#install-google-drive-tool-for-ubuntu>Install Google Drive tool for Ubuntu</a></li>
-<li><a href=#setup-bash-script-to-mount-google-drives>Setup BASH script to mount Google Drive(s)</a></li>
-</ul>
-</nav>
-</div>
+</div></div><article class="row card component mb-4 post">
+<div class=card-header>
+<h1 class="card-title post-title">Mount Google-Drive in Ubuntu
+</h1></div><div class=card-body><div class=post-meta>
+<span class=post-date title="created on 2021-11-14 08:25:24 +0000 UTC.">
+Nov 14, 2021
+</span><span class=post-reading-time>
+4 min read
+</span><span class=post-taxonomies><a href=https://www.ravihara.in/en/categories/ubuntu/ class="badge post-taxonomy">Ubuntu</a><a href=https://www.ravihara.in/en/categories/system/ class="badge post-taxonomy">System</a><a href=https://www.ravihara.in/en/series/manual/ class="badge post-taxonomy">Manual</a><a href=https://www.ravihara.in/en/tags/google-drive/ class="badge post-taxonomy">google-drive</a><a href=https://www.ravihara.in/en/tags/linux/ class="badge post-taxonomy">linux</a><a href=https://www.ravihara.in/en/tags/ubuntu/ class="badge post-taxonomy">ubuntu</a></span>
 </div><div class="post-content mb-3"><p>In this post, I&rsquo;ll be describing how to setup automatic mounting of one or more Google Drives locally, on your Ubuntu system.
 Following steps should generally work for the supported Ubuntu versions of the <a href=https://github.com/astrada/google-drive-ocamlfuse target=_blank rel="noopener noreferrer">google-drive-ocamlfuse</a>
-tool. Let&rsquo;s just right into the setup steps.</p>
-<h2 id=assumptions>Assumptions</h2>
-<p>Here are the list of assumptions made for descriptive purposes. Please replace them with appropriate values based on
-your system and environment.</p>
-<ul>
-<li><strong>Normal user</strong>: ubuntu</li>
-<li><strong>Base path for GDrive mount folders</strong>: $HOME/Store (Ex., /home/ubuntu/Store)</li>
-<li><strong>Gmail address corresponding to the drive</strong>: <a href=mailto:sample01@gmail.com>sample01@gmail.com</a>
-</li>
-<li><strong>Mount folder for GDrive under base path</strong>: gdrive01</li>
-</ul>
-<h2 id=install-google-drive-tool-for-ubuntu>Install Google Drive tool for Ubuntu</h2>
-<p>Thanks to <a href=https://github.com/astrada target=_blank rel="noopener noreferrer">Alessandro Strada</a>
-for this nice tool called
-<a href=https://github.com/astrada/google-drive-ocamlfuse target=_blank rel="noopener noreferrer">google-drive-ocamlfuse</a>
-, written in OCAML language. We will be using
+tool. Let&rsquo;s just right into the setup steps.</p><h2 id=assumptions>Assumptions<a class="anchor ms-1" href=#assumptions><i class="fas fa-link"></i></a></h2><p>Here are the list of assumptions made for descriptive purposes. Please replace them with appropriate values based on
+your system and environment.</p><ul>
+<li><strong>Normal user</strong>: ubuntu</li><li><strong>Base path for GDrive mount folders</strong>: $HOME/Store (Ex., /home/ubuntu/Store)</li><li><strong>Gmail address corresponding to the drive</strong>: <a href=mailto:sample01@gmail.com>sample01@gmail.com</a></li><li><strong>Mount folder for GDrive under base path</strong>: gdrive01</li></ul><h2 id=install-google-drive-tool-for-ubuntu>Install Google Drive tool for Ubuntu<a class="anchor ms-1" href=#install-google-drive-tool-for-ubuntu><i class="fas fa-link"></i></a></h2><p>Thanks to <a href=https://github.com/astrada target=_blank rel="noopener noreferrer">Alessandro Strada</a> for this nice tool called
+<a href=https://github.com/astrada/google-drive-ocamlfuse target=_blank rel="noopener noreferrer">google-drive-ocamlfuse</a>, written in OCAML language. We will be using
 this tool to mount one or more Google Drives under appropriate folder(s) locally. Pre-built
-binaries for this tool are available from <a href=https://launchpad.net/~alessandro-strada/+archive/ubuntu/ppa target=_blank rel="noopener noreferrer">Ubuntu PPA</a>
-.
+binaries for this tool are available from <a href=https://launchpad.net/~alessandro-strada/+archive/ubuntu/ppa target=_blank rel="noopener noreferrer">Ubuntu PPA</a>.
 It can be installed as follows. For more detailed installation steps and other ways to install and setup your system,
-please refer to the tool&rsquo;s link as mentioned earlier.</p>
-<p>Install <code>google-drive-ocamlfuse</code> tool by running the following commands in a terminal, with superuser privileges (i.e., sudo).</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=ln>1</span>sudo add-apt-repository ppa:alessandro-strada/ppa
-<span class=ln>2</span>sudo apt-get update
-<span class=ln>3</span>sudo apt-get install google-drive-ocamlfuse
-<span class=ln>4</span>sudo dpkg --configure -a <span class=c1>## Optional, mainly to complete any pending package configurations</span></code></pre></div>
-<h2 id=setup-bash-script-to-mount-google-drives>Setup BASH script to mount Google Drive(s)</h2>
-<ol>
+please refer to the tool&rsquo;s link as mentioned earlier.</p><p>Install <code>google-drive-ocamlfuse</code> tool by running the following commands in a terminal, with superuser privileges (i.e., sudo).</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=ln>1</span><span class=cl>sudo add-apt-repository ppa:alessandro-strada/ppa
+</span></span><span class=line><span class=ln>2</span><span class=cl>sudo apt-get update
+</span></span><span class=line><span class=ln>3</span><span class=cl>sudo apt-get install google-drive-ocamlfuse
+</span></span><span class=line><span class=ln>4</span><span class=cl>sudo dpkg --configure -a <span class=c1>## Optional, mainly to complete any pending package configurations</span></span></span></code></pre></div><h2 id=setup-bash-script-to-mount-google-drives>Setup BASH script to mount Google Drive(s)<a class="anchor ms-1" href=#setup-bash-script-to-mount-google-drives><i class="fas fa-link"></i></a></h2><ol>
 <li>
 <p>Open a text editor as normal user and create a new BASH script by name <code>mount-google-drives</code> with the following content.
 Edit the values in the <code>configuration block</code> based on your need.
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=ln> 1</span>    <span class=c1>#!/bin/bash</span>
-<span class=ln> 2</span>    <span class=c1># Script to mount google-drive accounts locally</span>
-<span class=ln> 3</span>
-<span class=ln> 4</span>    <span class=c1>############ Configuration block - START ############</span>
-<span class=ln> 5</span>    <span class=c1>## Either &#39;export&#39; GDRIVE_BASE folder in ~/.bashrc or,</span>
-<span class=ln> 6</span>    <span class=c1>## completely hardcode the absolute path here.</span>
-<span class=ln> 7</span>    <span class=c1>##</span>
-<span class=ln> 8</span>    <span class=c1>## This indicates the base folder under which, various</span>
-<span class=ln> 9</span>    <span class=c1>## google-drive account folders are mounted.</span>
-<span class=ln>10</span>    <span class=nv>GDRIVE_BASE</span><span class=o>=</span><span class=si>${</span><span class=nv>GDRIVE_BASE</span><span class=k>:-</span><span class=nv>$HOME</span><span class=p>/Store</span><span class=si>}</span>
-<span class=ln>11</span>
-<span class=ln>12</span>    <span class=c1>## Define mapping between a google-account label and</span>
-<span class=ln>13</span>    <span class=c1>## corresponding destination folder to mount it. The</span>
-<span class=ln>14</span>    <span class=c1>## mount-dir (i.e., destination folder) will be a folder</span>
-<span class=ln>15</span>    <span class=c1>## within the GDRIVE_BASE.</span>
-<span class=ln>16</span>    <span class=c1>##</span>
-<span class=ln>17</span>    <span class=c1>## The label need not match exactly with your gmail username</span>
-<span class=ln>18</span>    <span class=c1>## part. It&#39;s just an identifier to help you in identifying</span>
-<span class=ln>19</span>    <span class=c1>## the mounted google-drive.</span>
-<span class=ln>20</span>    <span class=c1>##</span>
-<span class=ln>21</span>    <span class=c1>## Multiple label-mount-dir can be provided in the array</span>
-<span class=ln>22</span>    <span class=c1>## below, by adding them in their own line.</span>
-<span class=ln>23</span>    <span class=nv>GDRIVE_MAPPING</span><span class=o>=(</span>
-<span class=ln>24</span>      <span class=c1>#&#34;label|mount-dir&#34;</span>
-<span class=ln>25</span>      <span class=s2>&#34;sample01|gdrive01&#34;</span>
-<span class=ln>26</span>    <span class=o>)</span>
-<span class=ln>27</span>    <span class=c1>############ Configuration block - END ############</span>
-<span class=ln>28</span>
-<span class=ln>29</span>    <span class=c1>############ No need to touch anything below this ############</span>
-<span class=ln>30</span>    <span class=k>for</span> drv in <span class=nv>$GDRIVE_MAPPING</span><span class=p>;</span> <span class=k>do</span>
-<span class=ln>31</span>      <span class=nv>label</span><span class=o>=</span><span class=k>$(</span><span class=nb>echo</span> <span class=nv>$drv</span> <span class=p>|</span> awk -F <span class=s1>&#39;|&#39;</span> <span class=s1>&#39;{print $1}&#39;</span><span class=k>)</span>
-<span class=ln>32</span>      <span class=nv>mount_dir</span><span class=o>=</span><span class=k>$(</span><span class=nb>echo</span> <span class=nv>$drv</span> <span class=p>|</span> awk -F <span class=s1>&#39;|&#39;</span> <span class=s1>&#39;{print $2}&#39;</span><span class=k>)</span>
-<span class=ln>33</span>
-<span class=ln>34</span>      <span class=o>[[</span> -z <span class=s2>&#34;</span><span class=nv>$label</span><span class=s2>&#34;</span> <span class=o>]]</span> <span class=o>||</span> <span class=o>[[</span> -z <span class=s2>&#34;</span><span class=nv>$mount_dir</span><span class=s2>&#34;</span> <span class=o>]]</span> <span class=o>&amp;&amp;</span> <span class=nb>echo</span> -e <span class=s2>&#34;GDrive label or mount-dir not defined!&#34;</span> <span class=o>&amp;&amp;</span> <span class=nb>exit</span> <span class=m>1</span>
-<span class=ln>35</span>
-<span class=ln>36</span>      <span class=nv>mount_point</span><span class=o>=</span><span class=s2>&#34;</span><span class=nv>$GDRIVE_BASE</span><span class=s2>/</span><span class=nv>$mount_dir</span><span class=s2>&#34;</span>
-<span class=ln>37</span>
-<span class=ln>38</span>      <span class=nv>CHECK_DRIVE</span><span class=o>=</span><span class=k>$(</span>mount <span class=p>|</span> grep -E <span class=s2>&#34;</span><span class=nv>$mount_point</span><span class=s2>&#34;</span> <span class=p>|</span> grep -v <span class=s2>&#34;grep&#34;</span><span class=k>)</span>
-<span class=ln>39</span>      <span class=o>[[</span> -z <span class=s2>&#34;</span><span class=si>${</span><span class=nv>CHECK_DRIVE</span><span class=si>}</span><span class=s2>&#34;</span> <span class=o>]]</span> <span class=o>&amp;&amp;</span> mkdir -p <span class=nv>$mount_point</span> <span class=o>&amp;&amp;</span> google-drive-ocamlfuse -label <span class=nv>$label</span> <span class=nv>$mount_point</span> <span class=o>&amp;&amp;</span> <span class=se>\
-</span><span class=ln>40</span><span class=se></span>      sync <span class=o>||</span> <span class=nb>echo</span> -e <span class=s2>&#34;GDrive for </span><span class=si>${</span><span class=nv>label</span><span class=si>}</span><span class=s2> already mounted&#34;</span>
-<span class=ln>41</span>    <span class=k>done</span>
-<span class=ln>42</span>
-<span class=ln>43</span>    <span class=nb>exit</span> <span class=m>0</span>
-<span class=ln>44</span>    </code></pre></div></p>
-</li>
-<li>
-<p>Save the file and close the editor.</p>
-</li>
-<li>
-<p>Move the file into <code>$HOME/.local/bin</code> folder. If the folder doesn&rsquo;t exist, create it by running <code>mkdir -p $HOME/.local/bin</code>.</p>
-</li>
-<li>
-<p>Set the executable bit for the script by running <code>chmod +x $HOME/.local/bin/mount-google-drives</code>.</p>
-</li>
-<li>
-<p>Ensure that <code>$HOME/.local/bin</code> is set as part of the PATH environment variable by running <code>echo $PATH</code>.</p>
-</li>
-<li>
-<p>If <code>$HOME/.local/bin</code> is not set as part of the PATH environment, you can add the following line to $HOME/.bashrc file</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=ln>1</span><span class=nv>PATH</span><span class=o>=</span><span class=s2>&#34;</span><span class=nv>$HOME</span><span class=s2>/.local/bin:</span><span class=nv>$PATH</span><span class=s2>&#34;</span>
-</code></pre></div></li>
-<li>
-<p>Close the terminal.</p>
-</li>
-</ol>
-<p>The script should be good enough for manual mounting of Google drives at any point. This script also ensures that, the
-Google drives are mounted only once, even if it is run multiple times.</p>
-<p>In case, you would like the Google drives to get automated on every login, you just need to do the following.</p>
-<ol>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=ln> 1</span><span class=cl>    <span class=c1>#!/bin/bash</span>
+</span></span><span class=line><span class=ln> 2</span><span class=cl>    <span class=c1># Script to mount google-drive accounts locally</span>
+</span></span><span class=line><span class=ln> 3</span><span class=cl>
+</span></span><span class=line><span class=ln> 4</span><span class=cl>    <span class=c1>############ Configuration block - START ############</span>
+</span></span><span class=line><span class=ln> 5</span><span class=cl>    <span class=c1>## Either &#39;export&#39; GDRIVE_BASE folder in ~/.bashrc or,</span>
+</span></span><span class=line><span class=ln> 6</span><span class=cl>    <span class=c1>## completely hardcode the absolute path here.</span>
+</span></span><span class=line><span class=ln> 7</span><span class=cl>    <span class=c1>##</span>
+</span></span><span class=line><span class=ln> 8</span><span class=cl>    <span class=c1>## This indicates the base folder under which, various</span>
+</span></span><span class=line><span class=ln> 9</span><span class=cl>    <span class=c1>## google-drive account folders are mounted.</span>
+</span></span><span class=line><span class=ln>10</span><span class=cl>    <span class=nv>GDRIVE_BASE</span><span class=o>=</span><span class=si>${</span><span class=nv>GDRIVE_BASE</span><span class=k>:-</span><span class=nv>$HOME</span><span class=p>/Store</span><span class=si>}</span>
+</span></span><span class=line><span class=ln>11</span><span class=cl>
+</span></span><span class=line><span class=ln>12</span><span class=cl>    <span class=c1>## Define mapping between a google-account label and</span>
+</span></span><span class=line><span class=ln>13</span><span class=cl>    <span class=c1>## corresponding destination folder to mount it. The</span>
+</span></span><span class=line><span class=ln>14</span><span class=cl>    <span class=c1>## mount-dir (i.e., destination folder) will be a folder</span>
+</span></span><span class=line><span class=ln>15</span><span class=cl>    <span class=c1>## within the GDRIVE_BASE.</span>
+</span></span><span class=line><span class=ln>16</span><span class=cl>    <span class=c1>##</span>
+</span></span><span class=line><span class=ln>17</span><span class=cl>    <span class=c1>## The label need not match exactly with your gmail username</span>
+</span></span><span class=line><span class=ln>18</span><span class=cl>    <span class=c1>## part. It&#39;s just an identifier to help you in identifying</span>
+</span></span><span class=line><span class=ln>19</span><span class=cl>    <span class=c1>## the mounted google-drive.</span>
+</span></span><span class=line><span class=ln>20</span><span class=cl>    <span class=c1>##</span>
+</span></span><span class=line><span class=ln>21</span><span class=cl>    <span class=c1>## Multiple label-mount-dir can be provided in the array</span>
+</span></span><span class=line><span class=ln>22</span><span class=cl>    <span class=c1>## below, by adding them in their own line.</span>
+</span></span><span class=line><span class=ln>23</span><span class=cl>    <span class=nv>GDRIVE_MAPPING</span><span class=o>=(</span>
+</span></span><span class=line><span class=ln>24</span><span class=cl>      <span class=c1>#&#34;label|mount-dir&#34;</span>
+</span></span><span class=line><span class=ln>25</span><span class=cl>      <span class=s2>&#34;sample01|gdrive01&#34;</span>
+</span></span><span class=line><span class=ln>26</span><span class=cl>    <span class=o>)</span>
+</span></span><span class=line><span class=ln>27</span><span class=cl>    <span class=c1>############ Configuration block - END ############</span>
+</span></span><span class=line><span class=ln>28</span><span class=cl>
+</span></span><span class=line><span class=ln>29</span><span class=cl>    <span class=c1>############ No need to touch anything below this ############</span>
+</span></span><span class=line><span class=ln>30</span><span class=cl>    <span class=k>for</span> drv in <span class=nv>$GDRIVE_MAPPING</span><span class=p>;</span> <span class=k>do</span>
+</span></span><span class=line><span class=ln>31</span><span class=cl>      <span class=nv>label</span><span class=o>=</span><span class=k>$(</span><span class=nb>echo</span> <span class=nv>$drv</span> <span class=p>|</span> awk -F <span class=s1>&#39;|&#39;</span> <span class=s1>&#39;{print $1}&#39;</span><span class=k>)</span>
+</span></span><span class=line><span class=ln>32</span><span class=cl>      <span class=nv>mount_dir</span><span class=o>=</span><span class=k>$(</span><span class=nb>echo</span> <span class=nv>$drv</span> <span class=p>|</span> awk -F <span class=s1>&#39;|&#39;</span> <span class=s1>&#39;{print $2}&#39;</span><span class=k>)</span>
+</span></span><span class=line><span class=ln>33</span><span class=cl>
+</span></span><span class=line><span class=ln>34</span><span class=cl>      <span class=o>[[</span> -z <span class=s2>&#34;</span><span class=nv>$label</span><span class=s2>&#34;</span> <span class=o>]]</span> <span class=o>||</span> <span class=o>[[</span> -z <span class=s2>&#34;</span><span class=nv>$mount_dir</span><span class=s2>&#34;</span> <span class=o>]]</span> <span class=o>&amp;&amp;</span> <span class=nb>echo</span> -e <span class=s2>&#34;GDrive label or mount-dir not defined!&#34;</span> <span class=o>&amp;&amp;</span> <span class=nb>exit</span> <span class=m>1</span>
+</span></span><span class=line><span class=ln>35</span><span class=cl>
+</span></span><span class=line><span class=ln>36</span><span class=cl>      <span class=nv>mount_point</span><span class=o>=</span><span class=s2>&#34;</span><span class=nv>$GDRIVE_BASE</span><span class=s2>/</span><span class=nv>$mount_dir</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=ln>37</span><span class=cl>
+</span></span><span class=line><span class=ln>38</span><span class=cl>      <span class=nv>CHECK_DRIVE</span><span class=o>=</span><span class=k>$(</span>mount <span class=p>|</span> grep -E <span class=s2>&#34;</span><span class=nv>$mount_point</span><span class=s2>&#34;</span> <span class=p>|</span> grep -v <span class=s2>&#34;grep&#34;</span><span class=k>)</span>
+</span></span><span class=line><span class=ln>39</span><span class=cl>      <span class=o>[[</span> -z <span class=s2>&#34;</span><span class=si>${</span><span class=nv>CHECK_DRIVE</span><span class=si>}</span><span class=s2>&#34;</span> <span class=o>]]</span> <span class=o>&amp;&amp;</span> mkdir -p <span class=nv>$mount_point</span> <span class=o>&amp;&amp;</span> google-drive-ocamlfuse -label <span class=nv>$label</span> <span class=nv>$mount_point</span> <span class=o>&amp;&amp;</span> <span class=se>\
+</span></span></span><span class=line><span class=ln>40</span><span class=cl><span class=se></span>      sync <span class=o>||</span> <span class=nb>echo</span> -e <span class=s2>&#34;GDrive for </span><span class=si>${</span><span class=nv>label</span><span class=si>}</span><span class=s2> already mounted&#34;</span>
+</span></span><span class=line><span class=ln>41</span><span class=cl>    <span class=k>done</span>
+</span></span><span class=line><span class=ln>42</span><span class=cl>
+</span></span><span class=line><span class=ln>43</span><span class=cl>    <span class=nb>exit</span> <span class=m>0</span>
+</span></span><span class=line><span class=ln>44</span><span class=cl>    </span></span></code></pre></div></p></li><li>
+<p>Save the file and close the editor.</p></li><li>
+<p>Move the file into <code>$HOME/.local/bin</code> folder. If the folder doesn&rsquo;t exist, create it by running <code>mkdir -p $HOME/.local/bin</code>.</p></li><li>
+<p>Set the executable bit for the script by running <code>chmod +x $HOME/.local/bin/mount-google-drives</code>.</p></li><li>
+<p>Ensure that <code>$HOME/.local/bin</code> is set as part of the PATH environment variable by running <code>echo $PATH</code>.</p></li><li>
+<p>If <code>$HOME/.local/bin</code> is not set as part of the PATH environment, you can add the following line to $HOME/.bashrc file</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=ln>1</span><span class=cl><span class=nv>PATH</span><span class=o>=</span><span class=s2>&#34;</span><span class=nv>$HOME</span><span class=s2>/.local/bin:</span><span class=nv>$PATH</span><span class=s2>&#34;</span>
+</span></span></code></pre></div></li><li>
+<p>Close the terminal.</p></li></ol><p>The script should be good enough for manual mounting of Google drives at any point. This script also ensures that, the
+Google drives are mounted only once, even if it is run multiple times.</p><p>In case, you would like the Google drives to get automated on every login, you just need to do the following.</p><ol>
 <li>
 <p>Open a text editor and create the file <code>mount-google-drives.desktop</code> under <code>$HOME/.config/autostart</code> folder.
-Create the folder, if it doesn&rsquo;t already exist.</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-ini data-lang=ini><span class=ln> 1</span><span class=k>[Desktop Entry]</span>
-<span class=ln> 2</span><span class=na>Type</span><span class=o>=</span><span class=s>Application</span>
-<span class=ln> 3</span><span class=na>Exec</span><span class=o>=</span><span class=s>/home/ubuntu/.local/bin/mount-google-drives</span>
-<span class=ln> 4</span><span class=na>Hidden</span><span class=o>=</span><span class=s>false</span>
-<span class=ln> 5</span><span class=na>NoDisplay</span><span class=o>=</span><span class=s>false</span>
-<span class=ln> 6</span><span class=na>X-GNOME-Autostart-enabled</span><span class=o>=</span><span class=s>true</span>
-<span class=ln> 7</span><span class=na>Name[en_US]</span><span class=o>=</span><span class=s>Google Drives</span>
-<span class=ln> 8</span><span class=na>Name</span><span class=o>=</span><span class=s>Google Drives</span>
-<span class=ln> 9</span><span class=na>Comment[en_US]</span><span class=o>=</span><span class=s>Mount Google Drive locally</span>
-<span class=ln>10</span><span class=na>Comment</span><span class=o>=</span><span class=s>Mount Google Drive locally</span>
-</code></pre></div><div class="admonition tip">
-<div class=title>TIP</div>
-<div class=content><pre><code>Update the absolute path to the `mount-google-drives` script for `Exec` entry based on your username.
-</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Save the file and close the editor.</p>
-</li>
-</ol>
-<p>Now, logout of your desktop session and login again. If all the steps are followed correctly, you should see your
-mounted Google drive(s) locally, using File Explorer or by running <code>df -TH</code> command in a terminal.</p>
-<p>Hope it helped you!</p>
-</div><div class="modal fade" id=rewardModal tabindex=-1 aria-labelledby=rewardModalLabel aria-hidden=true>
+Create the folder, if it doesn&rsquo;t already exist.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-ini data-lang=ini><span class=line><span class=ln> 1</span><span class=cl><span class=k>[Desktop Entry]</span>
+</span></span><span class=line><span class=ln> 2</span><span class=cl><span class=na>Type</span><span class=o>=</span><span class=s>Application</span>
+</span></span><span class=line><span class=ln> 3</span><span class=cl><span class=na>Exec</span><span class=o>=</span><span class=s>/home/ubuntu/.local/bin/mount-google-drives</span>
+</span></span><span class=line><span class=ln> 4</span><span class=cl><span class=na>Hidden</span><span class=o>=</span><span class=s>false</span>
+</span></span><span class=line><span class=ln> 5</span><span class=cl><span class=na>NoDisplay</span><span class=o>=</span><span class=s>false</span>
+</span></span><span class=line><span class=ln> 6</span><span class=cl><span class=na>X-GNOME-Autostart-enabled</span><span class=o>=</span><span class=s>true</span>
+</span></span><span class=line><span class=ln> 7</span><span class=cl><span class=na>Name[en_US]</span><span class=o>=</span><span class=s>Google Drives</span>
+</span></span><span class=line><span class=ln> 8</span><span class=cl><span class=na>Name</span><span class=o>=</span><span class=s>Google Drives</span>
+</span></span><span class=line><span class=ln> 9</span><span class=cl><span class=na>Comment[en_US]</span><span class=o>=</span><span class=s>Mount Google Drive locally</span>
+</span></span><span class=line><span class=ln>10</span><span class=cl><span class=na>Comment</span><span class=o>=</span><span class=s>Mount Google Drive locally</span>
+</span></span></code></pre></div><div class="admonition tip">
+<div class=title>TIP</div><div class=content><pre><code>Update the absolute path to the `mount-google-drives` script for `Exec` entry based on your username.
+</code></pre></div></div></li><li>
+<p>Save the file and close the editor.</p></li></ol><p>Now, logout of your desktop session and login again. If all the steps are followed correctly, you should see your
+mounted Google drive(s) locally, using File Explorer or by running <code>df -TH</code> command in a terminal.</p><p>Hope it helped you!</p></div><div class="modal fade" id=rewardModal tabindex=-1 aria-labelledby=rewardModalLabel aria-hidden=true>
 <div class=modal-dialog>
 <div class="modal-content surface">
 <div class=modal-header>
-<h5 class=modal-title id=rewardModalLabel><i class="fas fa-fw fa-coffee"></i>Buy me a coffee</h5>
-<a href=# data-bs-dismiss=modal class="btn btn-sm btn-outline-primary" aria-label=Close><i class="fas fa-times"></i></a>
-</div>
-<div class=modal-body>
+<h5 class=modal-title id=rewardModalLabel><i class="fas fa-fw fa-coffee"></i>Buy me a coffee</h5><a href=# data-bs-dismiss=modal class="btn btn-sm btn-outline-primary" aria-label=Close><i class="fas fa-times"></i></a>
+</div><div class=modal-body>
 <ul class="nav nav-tabs mb-3" role=tablist><li class="nav-item text-nowrap" role=presentation>
 <a class="nav-link active" id=reward-alipay-tab data-bs-toggle=tab href=#reward-alipay role=tab aria-controls=reward-alipay aria-selected=true>
 <i class="fab fa-fw fa-alipay"></i>Alipay
@@ -327,115 +244,101 @@ mounted Google drive(s) locally, using File Explorer or by running <code>df -TH<
 <a class=nav-link id=reward-wechat-tab data-bs-toggle=tab href=#reward-wechat role=tab aria-controls=reward-wechat aria-selected=true>
 <i class="fab fa-fw fa-weixin"></i>WeChat
 </a>
-</li></ul>
-<div class=tab-content id=rewardTabContent><div class="tab-pane fade post-reward-content show active" id=reward-alipay role=tabpanel aria-labelledby=reward-alipay-tab>
+</li></ul><div class=tab-content id=rewardTabContent><div class="tab-pane fade post-reward-content show active" id=reward-alipay role=tabpanel aria-labelledby=reward-alipay-tab>
 <img class="img-fluid post-reward-img" src=https://www.ravihara.in/images/reward/alipay.png loading=lazy>
 </div><div class="tab-pane fade post-reward-content show" id=reward-wechat role=tabpanel aria-labelledby=reward-wechat-tab>
 <img class="img-fluid post-reward-img" src=https://www.ravihara.in/images/reward/wechat.png loading=lazy>
-</div></div>
-</div>
-</div>
-</div>
-</div><hr><div class="post-navs d-flex mb-3 justify-content-evenly">
-<div class="post-nav post-prev"><i class="fas fa-fw fa-chevron-left"></i>
+</div></div></div></div></div></div></div><div class=card-footer><div class="post-navs d-flex justify-content-evenly"><div class="post-nav post-prev">
+<i class="fas fa-fw fa-chevron-left"></i>
 <a href=https://www.ravihara.in/en/posts/usb-cdma-wifi/>Home Wifi With CDMA Modem
 </a>
 </div><div class="post-nav post-next">
 <a href=https://www.ravihara.in/en/posts/java-class-vs-iface/>Using Abstract Class and Interface in Java
 </a>
 <i class="fas fa-fw fa-chevron-right"></i>
-</div></div><section class=related-posts-wrapper>
-<h3>Related Posts</h3>
-<ul class=related-posts><li><a href=https://www.ravihara.in/en/posts/usb-cdma-wifi/>Home Wifi With CDMA Modem
-</a></li><li><a href=https://www.ravihara.in/en/about/>About Me
-</a></li><li><a href=https://www.ravihara.in/en/contact/>Contact Me
-</a></li></ul>
-</section></div>
-</article><div class="card component row post-comments">
-<div class=card-body><div id=disqus_thread></div>
-<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//www-ravihara-in.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
-<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
-<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div>
-</div></div>
-</div><aside class="col-lg-4 sidebar d-flex">
-<div class=container>
+</div></div></div></article><div class="post-copyright mb-3 row card component" id=post-copyright>
+<div class=card-header>
+<h2 class=card-title>Copyright</h2></div><div class=card-body><a class="d-flex align-items-center flex-column" target=_blank rel="license noopener noreferrer" href=https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en>
+<span><i class="fab fa-fw fa-2x fa-creative-commons"></i><i class="fab fa-fw fa-2x fa-creative-commons-by"></i><i class="fab fa-fw fa-2x fa-creative-commons-nc"></i><i class="fab fa-fw fa-2x fa-creative-commons-nd"></i></span>
+CC BY-NC-ND 4.0
+</a>
+</div></div><section class="related-posts row card component">
+<div class=card-header>
+<h2 class=card-title>Related Posts</h2></div><div class=card-body>
+<ul class=post-list><li>
+<a href=https://www.ravihara.in/en/posts/usb-cdma-wifi/>Home Wifi With CDMA Modem
+</a>
+<span class="float-end post-date">Nov 10, 2021
+</span>
+</li></ul></div></section><div class="card component row post-comments" id=post-comments>
+<div class=card-header>
+<h2 class=card-title>Comments</h2></div><div class=card-body><div id=disqus_thread></div><script type=application/javascript>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//www-ravihara-in.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div></div></div></div><aside class="col-lg-4 sidebar d-flex">
+<div class="container d-flex flex-column">
 <section class="card row text-center profile component">
 <div class=card-body>
 <div class="col-12 d-flex align-items-center justify-content-center"><img class="profile-avatar rounded-circle" alt="Ravishankar Haranath" src=https://www.ravihara.in/images/profile.png loading=lazy width=1080 height=1080>
-</div>
-<div class="col-12 profile-meta"><div class=profile-name>Ravishankar Haranath</div><div class=profile-bio>Ubuntu, RHEL, JS/Node, Java-SE, Golang, Cloud and DevOps</div><div class=profile-company><i class="fas fa-fw fa-building"></i>Solutions with FOSS</div><div class=profile-location><i class="fas fa-fw fa-map-marker-alt"></i><a href=https://goo.gl/maps/xw3V1iacBnY3JNRW6 target=_blank>Bengaluru</a></div><div class=profile-about><i class="fas fa-fw fa-user"></i><a href=https://www.ravihara.in/en/about/>About Me</a></div><div class=profile-contact><i class="fas fa-fw fa-question-circle"></i><a href=https://www.ravihara.in/en/contact/>Contact Me</a></div></div>
-</div>
-</section>
-<section class="featured-posts row card component">
-<div class=card-body>
-<h2 class=card-title>Featured Posts</h2>
-<ul><li><a href=https://www.ravihara.in/en/posts/java-class-vs-iface/>Using Abstract Class and Interface in Java
-</a></li><li><a href=https://www.ravihara.in/en/posts/gdrive-fuse-mount/>Mount Google-Drive in Ubuntu
-</a></li><li><a href=https://www.ravihara.in/en/posts/usb-cdma-wifi/>Home Wifi With CDMA Modem
-</a></li></ul>
-</div>
-</section><section class="recent-posts row card component">
-<div class=card-body>
-<h2 class=card-title>Recent Posts</h2>
-<ul><li><a href=https://www.ravihara.in/en/posts/java-class-vs-iface/>Using Abstract Class and Interface in Java
-</a></li><li><a href=https://www.ravihara.in/en/posts/gdrive-fuse-mount/>Mount Google-Drive in Ubuntu
-</a></li><li><a href=https://www.ravihara.in/en/posts/usb-cdma-wifi/>Home Wifi With CDMA Modem
-</a></li></ul>
-</div>
-</section><section class="taxonomies row card component">
-<div class=card-body>
-<h2 class=card-title>
-<a href=https://www.ravihara.in/en/categories>Categories</a>
-</h2>
-<div><a href=https://www.ravihara.in/en/categories/ubuntu/ class="badge bg-primary text-white rounded post-taxonomy" title=Ubuntu>
-Ubuntu
-</a><a href=https://www.ravihara.in/en/categories/networking/ class="badge bg-primary text-white rounded post-taxonomy" title=Networking>
-Networking
-</a><a href=https://www.ravihara.in/en/categories/programming/ class="badge bg-primary text-white rounded post-taxonomy" title=programming>
-programming
-</a><a href=https://www.ravihara.in/en/categories/system/ class="badge bg-primary text-white rounded post-taxonomy" title=System>
-System
-</a></div>
-</div>
-</section><section class="taxonomies row card component">
-<div class=card-body>
+</div><div class="col-12 profile-meta"><div class=profile-name>Ravishankar Haranath</div><div class=profile-bio>Ubuntu, RHEL, JS/Node, Java-SE, Golang, Cloud and DevOps</div><div class=profile-company><i class="fas fa-fw fa-building"></i>Solutions with FOSS</div><div class=profile-location><i class="fas fa-fw fa-map-marker-alt"></i><a href=https://goo.gl/maps/xw3V1iacBnY3JNRW6 target=_blank>Bengaluru</a></div><div class=profile-about><i class="fas fa-fw fa-user"></i><a href=https://www.ravihara.in/en/about/>About Me</a></div><div class=profile-contact><i class="fas fa-fw fa-question-circle"></i><a href=https://www.ravihara.in/en/contact/>Contact Me</a></div></div></div></section><div class="post-toc row mb-4 card component" id=postTOC>
+<div class=card-header>
+<h2 class=card-title>Contents</h2></div><div class=card-body>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#assumptions>Assumptions</a></li><li><a href=#install-google-drive-tool-for-ubuntu>Install Google Drive tool for Ubuntu</a></li><li><a href=#setup-bash-script-to-mount-google-drives>Setup BASH script to mount Google Drive(s)</a></li></ul></nav></div></div><section class="featured-posts row card component">
+<div class=card-header>
+<h2 class=card-title>Featured Posts</h2></div><div class=card-body>
+<ul class=post-list><li>
+<a href=https://www.ravihara.in/en/posts/java-class-vs-iface/>Using Abstract Class and Interface in Java
+</a>
+</li><li>
+<a href=https://www.ravihara.in/en/posts/gdrive-fuse-mount/>Mount Google-Drive in Ubuntu
+</a>
+</li><li>
+<a href=https://www.ravihara.in/en/posts/usb-cdma-wifi/>Home Wifi With CDMA Modem
+</a>
+</li></ul></div></section><section class="recent-posts row card component">
+<div class=card-header>
+<h2 class=card-title>Recent Posts</h2></div><div class=card-body>
+<ul class=post-list><li>
+<a href=https://www.ravihara.in/en/posts/java-class-vs-iface/>Using Abstract Class and Interface in Java
+</a>
+</li><li>
+<a href=https://www.ravihara.in/en/posts/gdrive-fuse-mount/>Mount Google-Drive in Ubuntu
+</a>
+</li><li>
+<a href=https://www.ravihara.in/en/posts/usb-cdma-wifi/>Home Wifi With CDMA Modem
+</a>
+</li></ul></div></section><section class="series-taxonomies row card component">
+<div class=card-header>
 <h2 class=card-title>
 <a href=https://www.ravihara.in/en/series>Series</a>
-</h2>
-<div><a href=https://www.ravihara.in/en/series/manual/ class="badge bg-primary text-white rounded post-taxonomy" title=Manual>
-Manual
-</a></div>
-</div>
-</section><section class="taxonomies row card component">
-<div class=card-body>
+</h2></div><div class=card-body>
+<div class=py-2><a href=https://www.ravihara.in/en/series/manual/ class="badge rounded post-taxonomy" title=Manual>
+Manual</a></div></div></section><section class="categories-taxonomies row card component">
+<div class=card-header>
+<h2 class=card-title>
+<a href=https://www.ravihara.in/en/categories>Categories</a>
+</h2></div><div class=card-body>
+<div class=py-2><a href=https://www.ravihara.in/en/categories/ubuntu/ class="badge rounded post-taxonomy" title=Ubuntu>
+Ubuntu</a><a href=https://www.ravihara.in/en/categories/networking/ class="badge rounded post-taxonomy" title=Networking>
+Networking</a><a href=https://www.ravihara.in/en/categories/programming/ class="badge rounded post-taxonomy" title=programming>
+programming</a><a href=https://www.ravihara.in/en/categories/system/ class="badge rounded post-taxonomy" title=System>
+System</a></div></div></section><section class="tags-taxonomies row card component">
+<div class=card-header>
 <h2 class=card-title>
 <a href=https://www.ravihara.in/en/tags>Tags</a>
-</h2>
-<div><a href=https://www.ravihara.in/en/tags/linux/ class="badge bg-primary text-white rounded post-taxonomy" title=linux>
-linux
-</a><a href=https://www.ravihara.in/en/tags/ubuntu/ class="badge bg-primary text-white rounded post-taxonomy" title=ubuntu>
-ubuntu
-</a><a href=https://www.ravihara.in/en/tags/best-practice/ class="badge bg-primary text-white rounded post-taxonomy" title=best-practice>
-best-practice
-</a><a href=https://www.ravihara.in/en/tags/cdma/ class="badge bg-primary text-white rounded post-taxonomy" title=cdma>
-cdma
-</a><a href=https://www.ravihara.in/en/tags/google-drive/ class="badge bg-primary text-white rounded post-taxonomy" title=google-drive>
-google-drive
-</a><a href=https://www.ravihara.in/en/tags/java/ class="badge bg-primary text-white rounded post-taxonomy" title=java>
-java
-</a><a href=https://www.ravihara.in/en/tags/wifi/ class="badge bg-primary text-white rounded post-taxonomy" title=wifi>
-wifi
-</a></div>
-</div>
-</section>
-</div>
-</aside>
-</div>
-</main><footer class="footer mt-auto py-3 text-center container"><nav class="social-links nav my-2 justify-content-center"><a class="nav-link social-link" target=_blank href=https://hub.docker.com/u/ravihara title="Docker Hub" rel="noopener noreferrer">
+</h2></div><div class=card-body>
+<div class=py-2><a href=https://www.ravihara.in/en/tags/linux/ class="badge rounded post-taxonomy" title=linux>
+linux</a><a href=https://www.ravihara.in/en/tags/ubuntu/ class="badge rounded post-taxonomy" title=ubuntu>
+ubuntu</a><a href=https://www.ravihara.in/en/tags/best-practice/ class="badge rounded post-taxonomy" title=best-practice>
+best-practice</a><a href=https://www.ravihara.in/en/tags/cdma/ class="badge rounded post-taxonomy" title=cdma>
+cdma</a><a href=https://www.ravihara.in/en/tags/google-drive/ class="badge rounded post-taxonomy" title=google-drive>
+google-drive</a><a href=https://www.ravihara.in/en/tags/java/ class="badge rounded post-taxonomy" title=java>
+java</a><a href=https://www.ravihara.in/en/tags/wifi/ class="badge rounded post-taxonomy" title=wifi>
+wifi</a></div></div></section></div></aside></div></main><footer class="footer mt-auto py-3 text-center container"><nav class="social-links nav justify-content-center mb-2"><a class="nav-link social-link" target=_blank href=https://hub.docker.com/u/ravihara title="Docker Hub" rel="noopener noreferrer">
 <i class="fa-fw fa-2x fab fa-docker"></i>
 </a><a class="nav-link social-link" target=_blank href=https://github.com/ravihara title=GitHub rel="noopener noreferrer">
 <i class="fa-fw fa-2x fab fa-github"></i>
-</a><a class="nav-link social-link" target=_blank href=https://linkedin.com/in/raviharanath title=LinkedIn rel="noopener noreferrer">
+</a><a class="nav-link social-link" target=_blank href=https://linkedin.com/in/in/raviharanath title=LinkedIn rel="noopener noreferrer">
 <i class="fa-fw fa-2x fab fa-linkedin-in"></i>
 </a><a class="nav-link social-link" target=_blank href=https://www.quora.com/profile/Ravishankar-Haranath title=Quora rel="noopener noreferrer">
 <i class="fa-fw fa-2x fab fa-quora"></i>
@@ -443,15 +346,12 @@ wifi
 <i class="fa-fw fa-2x fab fa-stack-overflow"></i>
 </a><a class="nav-link social-link" target=_blank href=https://twitter.com/ahikrv title=Twitter rel="noopener noreferrer">
 <i class="fa-fw fa-2x fab fa-twitter"></i>
-</a></nav>
-<div class="copyright mb-2">
-Copyright © 2021-2021 Ravishankar Haranath. All Rights Reserved.
-</div>
-<div class="powered-by mb-2">
+</a></nav><div class="copyright mb-2">
+Copyright © 2021-2022 Ravishankar Haranath. All Rights Reserved.
+</div><div class="powered-by mb-2">
 Powered by <a href=https://gohugo.io target=_blank rel="noopener noreferrer">Hugo</a> and the <a href=https://github.com/razonyang/hugo-theme-bootstrap target=_blank rel="noopener noreferrer">Bootstrap</a> theme.
-</div></footer>
-<script src=https://www.ravihara.in/js/bundle.min.52d895defdf1b45a7af6e9c66893e370e2952d223eeb2b3a2ba3a27eedab2682.js integrity="sha256-UtiV3v3xtFp69unGaJPjcOKVLSI+6ys6K6Oifu2rJoI=" crossorigin=anonymous defer></script><script defer src=https://www.ravihara.in/js/viewer.min.9f39f897757e616b3f6faf1d7955ea42a180a4e71d898e80f1c13d45e59b9abb.js integrity="sha256-nzn4l3V+YWs/b68deVXqQqGApOcdiY6A8cE9ReWbmrs=" crossorigin=anonymous></script><script defer src=https://www.ravihara.in/js/mermaid.min.056a5e55b4ca662f849c0558a048f7c2e36f606c23a6b0e4e0e2826b5b0c9869.js integrity="sha256-BWpeVbTKZi+EnAVYoEj3wuNvYGwjprDk4OKCa1sMmGk=" crossorigin=anonymous></script>
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-212816023-1','auto'),ga('send','pageview'))</script>
+</div></footer><script src=https://www.ravihara.in/js/main.f2d4920326e9a46cb8bba258596dc03323d496b847f06cdf340af883fe777439.js integrity="sha256-8tSSAybppGy4u6JYWW3AMyPUlrhH8GzfNAr4g/53dDk=" crossorigin=anonymous defer></script><script src=https://www.ravihara.in/js/icons.min.9d2ffa3761d1fc3f2b70b7d0727df781314311765f60541ec864acf5e84e3acb.js integrity="sha256-nS/6N2HR/D8rcLfQcn33gTFDEXZfYFQeyGSs9ehOOss=" crossorigin=anonymous defer></script>
+<script src=https://www.ravihara.in/js/viewer.min.56cda9e4d5250af6a4ac0304cbfdfa39dfb9288c83167984c4ed7fbe2a54c34d.js integrity="sha256-Vs2p5NUlCvakrAMEy/36Od+5KIyDFnmExO1/vipUw00=" crossorigin=anonymous defer></script><script defer src=https://www.ravihara.in/js/mermaid.min.d150a14f745398a69a2abfee2cb0ed3cecd883ef10e777386cdfca73b8490fbc.js integrity="sha256-0VChT3RTmKaaKr/uLLDtPOzYg+8Q53c4bN/Kc7hJD7w=" crossorigin=anonymous></script>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-212816023-1","auto"),ga("send","pageview"))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
-</body>
-</html>
+</body></html>
