@@ -72,13 +72,13 @@ paginate = 8 # Archive pagination. Default to 100.
 
 # Site verification
 [siteVerification]
-google = ""
-bing = ""
-baidu = ""
-baiduUnion = "" # Baidu Union
-so = ""
-sogou = ""
-shenma = ""
+google = "D6hbO8AEeXrmHKzA-V57Hv71iA_rbiK8ffhnRJI3ImI"
+#bing = ""
+#baidu = ""
+#baiduUnion = "" # Baidu Union
+#so = ""
+#sogou = ""
+#shenma = ""
 
 [creativeCommons]
 # by = true # Credit must be given to you, the creator.
