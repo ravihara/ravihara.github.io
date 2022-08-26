@@ -9,7 +9,7 @@ toc = true
 reward = true
 diagram = true
 categories = [
-  "programming"
+  "Programming"
 ]
 tags = [
   "java",
