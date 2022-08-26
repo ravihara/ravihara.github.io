@@ -9,16 +9,16 @@ toc = true
 reward = true
 diagram = true
 categories = [
-  "Ubuntu",
-  "System"
+  "Linux",
+  "SysAdmin"
 ]
 tags = [
-  "google-drive",
   "linux",
-  "ubuntu"
+  "ubuntu",
+  "google-drive"
 ]
 series = [
-  "Manual"
+  "Reference"
 ]
 +++
 

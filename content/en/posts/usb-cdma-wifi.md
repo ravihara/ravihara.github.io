@@ -9,17 +9,18 @@ toc = true
 reward = true
 diagram = true
 categories = [
-  "Ubuntu",
-  "Networking"
+  "Linux",
+  "SysAdmin"
 ]
 tags = [
-  "wifi",
-  "cdma",
   "linux",
-  "ubuntu"
+  "debian",
+  "ubuntu",
+  "wifi",
+  "cdma"
 ]
 series = [
-  "Manual"
+  "Reference"
 ]
 +++
 
