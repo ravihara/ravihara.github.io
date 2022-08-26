@@ -9,14 +9,15 @@ toc = true
 reward = true
 diagram = true
 categories = [
-  "Programming"
+   "Linux",
+   "Programming"
 ]
 tags = [
-  "java",
-  "best-practice"
+   "java",
+   "best-practice"
 ]
 series = [
-  "Manual"
+   "Reference"
 ]
 +++
 
