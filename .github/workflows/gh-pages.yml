@@ -36,7 +36,7 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Pack node dependencies for the theme
-        run: hugo mod npm Pack
+        run: hugo mod npm pack
 
       - name: Install node dependencies for the theme
         run: npm install
