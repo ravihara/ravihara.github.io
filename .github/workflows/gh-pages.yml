@@ -29,6 +29,12 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
+      - name: Pack node dependencies for the theme
+        run: hugo mod npm Pack
+
+      - name: Install node dependencies for the theme
+        run: npm install
+
       - name: Theme Dependencies
         run: npm install
         working-directory: themes/hugo-theme-bootstrap
