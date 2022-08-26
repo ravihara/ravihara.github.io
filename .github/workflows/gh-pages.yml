@@ -21,6 +21,12 @@ jobs:
         with:
           node-version: "16"
 
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "0.101.0"
+          extended: true
+
       - name: Cache NPM
         uses: actions/cache@v2
         with:
@@ -38,12 +44,6 @@ jobs:
       - name: Theme Dependencies
         run: npm install
         working-directory: themes/hugo-theme-bootstrap
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: "0.101.0"
-          extended: true
 
       - name: Build
         run: hugo --minify
