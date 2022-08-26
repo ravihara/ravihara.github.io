@@ -10,8 +10,8 @@ keywords = "Hugo, Bootstrap, Blog Theme"
 logo = false        # Disable Logo
 brand = "Ravi-Hara"
 
-palette = "blue" # Default palette. Optional.
-# palettes = ["blue", "blue gray", "brown"] # Available palettes. Default to ALL.
+palette = "blue-gray" # Default palette. Optional.
+# palettes = ["blue", "blue-gray", "indigo"] # Available palettes. Default to ALL.
 palettes = [] # Disable palette switcher.
 
 # color = "dark" # light, dark or dynamic. Default to dynamic.
@@ -117,7 +117,7 @@ threshold = 0.1
 #[share]
 #addThis = "" # AddThis pubid.
 
-[fontSize] # Comment or remove this settings to disable font size switcher.
+#[fontSize] # Comment or remove this settings to disable font size switcher.
 # extraSmall = ".8rem"
 # small = ".9rem"
 # large = "1.1rem"
