@@ -37,3 +37,6 @@ home = ["HTML", "RSS", "JSON"]
 category = "categories"
 series = "series"
 tag = "tags"
+
+[build]
+writeStats = true
