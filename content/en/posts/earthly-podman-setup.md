@@ -35,7 +35,28 @@ to using `docker` the following guide will help in setting up Earthly to use pod
 ## Setup Podman on Ubuntu
 
 For details on installing Podman on Ubuntu, please refer to [__this__](https://www.ravihara.in/en/posts/setup-apt-podman/)
-blog post. Once you setup the `podman` on your system, please move to the next sections.
+blog post.
+
+### Enable user-specific podman service
+
+In order for the `podman` to serve as a backend for `docker-compose` in a rootless setup, we need to enable podman systemctl
+service for a given user. Hence, as a non-root user, run the following commands to enable the same.
+
+````bash
+systemctl --user enable podman.service
+systemctl --user start podman.service
+````
+
+After the above commands run successfully, add the following entry into ~/.bashrc file so that, it is available in
+all the user's shell sessions.
+
+````bash
+export DOCKER_HOST=unix://${XDG_RUNTIME_DIR}/podman/podman.sock
+````
+
+{{< tip title="TIP" >}}
+Make sure you close the existing terminal session and open a new one for the changes in ~/.bashrc to get reflected.
+{{< /tip >}}
 
 ## Enable unified cgroup hierarchy
 
@@ -108,32 +129,33 @@ Older versions (or other Debian variants) might require all the steps.
 
 * Finally, reboot the machine for the permissions to show up per user.
 
-* With your user account (not root), run the following command to verify that you have the required
-  cgroup delegation permissions.
+### Testing cgroup permissions
 
-  ````bash
-  cat "/sys/fs/cgroup/user.slice/user-$(id -u).slice/user@$(id -u).service/cgroup.controllers"
-  ````
+As a non-root user, run the following command to verify that you have the required cgroup delegation permissions.
 
-  It should show up the items - _cpu cpuset io memory pids_, as set in the delegate.conf file above. You are
-  now ready to install earthly and use it with podman.
+````bash
+cat "/sys/fs/cgroup/user.slice/user-$(id -u).slice/user@$(id -u).service/cgroup.controllers"
+````
+
+It should show up the items - _cpu cpuset io memory pids_, as set in the delegate.conf file above. You are now ready to
+install earthly and use it with podman.
 
 ## Setup Earthly on Ubuntu
 
-For details on installing Podman on Ubuntu, please refer to [__this__](https://www.ravihara.in/en/posts/setup-apt-earthly/)
+For details on installing Earthly on Ubuntu, please refer to [__this__](https://www.ravihara.in/en/posts/setup-apt-earthly/)
 blog post.
 
 ## Testing Earthly with Podman
 
-If you have followed the above steps and have installed and bootstraped earthly using podman, create a file named `Earthfile`
-locally with the following content.
+If you have followed the above steps to install `podman` and `earthly`, create a file named `Earthfile` locally with
+the following content.
 
 ````docker
 VERSION 0.6
 FROM python:3
 
 build:
-  RUN mkdir -p /src && echo "print('Hello World')" >> /src/hello.py
+  RUN mkdir -p /src && echo "print('Hello Earthly!')" >> /src/hello.py
   SAVE ARTIFACT src /src
 
 docker:
@@ -142,8 +164,10 @@ docker:
   SAVE IMAGE python-example:latest
 ````
 
-From the same folder where the file is created, run `earthly +docker`. From the output, you should see that `earthly` is
-using `podman` internally to run the build.
+From the same folder where the file is created, run `earthly +docker`. From the build output, you should see
+that `earthly` is using `podman` internally to run the build.
+
+After build is complete, run `podman run python-example:latest`. You should see `Hello Earthly!` as the output.
 
 {{< note title="References" >}}
 Special thanks to the people who have already given the information in various blogs and forums.
