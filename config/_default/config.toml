@@ -16,8 +16,8 @@ paginate = 5
 disqusShortname = "www-ravihara-in"
 
 # Google analytics
-# googleAnalytics = "UA-123-45"
-googleAnalytics = "UA-212816023-1"
+# googleAnalytics = "UA-212816023-1"
+googleAnalytics = "G-0RBGH8QG0Z"
 
 enableRobotsTXT = true
 
